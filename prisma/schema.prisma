@@ -18,8 +18,6 @@ model Commune {
     wikipediaPicture String
     name             String
     inhabitant       String
-    lat              String
-    lon              String
     minHeight        Float
     maxHeight        Float
     area             Float

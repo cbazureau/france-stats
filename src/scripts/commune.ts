@@ -3,6 +3,14 @@ import path from "path";
 import fs from "fs";
 import cheerio from "cheerio";
 
+const FORCE_INFO: { name: string; codeInsee: string; zipCode: string }[] = [
+  {
+    name: "Lyon",
+    codeInsee: "69123",
+    zipCode: "69000",
+  },
+];
+
 // Encapsulate top level await in an async function
 (async () => {
   try {
@@ -20,7 +28,6 @@ import cheerio from "cheerio";
       )
       .get() as string[];
     communeLinks.shift();
-    console.log(communeLinks);
     const communes = await Promise.all(
       communeLinks.map(async (communeLink) => {
         // Download the content of the page 'https://fr.m.wikipedia.org/wiki/Collonges-au-Mont-d%27Or' and store it in the variable 'html'
@@ -53,10 +60,11 @@ import cheerio from "cheerio";
           str.replace(/\[.+\]|\s/g, "");
 
         // Create an object with the name of the commune and the population
+        const currentName = $(".mw-page-title-main").text();
         const commune = {
           wikipediaLink: communeLink,
           wikipediaPicture: table.find("img").attr("src"),
-          name: $(".mw-page-title-main").text(),
+          name: currentName,
           inhabitant: cleanString(getRawValue(rows, "Gentilé")),
           minHeight: heights[0],
           maxHeight: heights[1],
@@ -67,6 +75,7 @@ import cheerio from "cheerio";
           ),
           codeInsee: cleanString(getRawValue(rows, "Code commune")),
           zipCode: cleanString(getRawValue(rows, "Code postal")),
+          ...(FORCE_INFO.find(({ name }) => name === currentName) || {}),
         };
         return commune;
       })
@@ -74,7 +83,7 @@ import cheerio from "cheerio";
     // save the communes array in a csv formatted file 'communes.csv' with the following columns: name, inhabitant, minHeight, maxHeight, area, codeInsee, zipCode, wikipediaLink, wikipediaPicture
     const csv: string = [
       "name;inhabitant;minHeight;maxHeight;area;codeInsee;zipCode;wikipediaLink;wikipediaPicture",
-      communes.map(
+      ...communes.map(
         (commune) =>
           `${commune.name};${commune.inhabitant};${commune.minHeight || ""};${
             commune.maxHeight || ""
