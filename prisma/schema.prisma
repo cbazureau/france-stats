@@ -12,15 +12,24 @@ datasource db {
 }
 
 model Commune {
-    codeInsee String  @id @unique
-    name      String
-    stats     Stats[]
+    codeInsee        String  @id @unique
+    zipCode          String
+    wikipediaLink    String
+    wikipediaPicture String
+    name             String
+    inhabitant       String
+    lat              String
+    lon              String
+    minHeight        Float
+    maxHeight        Float
+    area             Float
+    stats            Stats[]
 }
 
 model Stats {
     codeInsee String
     year      Int
-    commune   Commune @relation(fields: [codeInsee], references: [codeInsee], onDelete: Cascade)
+    commune   Commune @relation(fields: [codeInsee], references: [codeInsee])
     name      String
     category  String
     value     Int

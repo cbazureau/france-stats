@@ -7,7 +7,8 @@
     "dev": "next dev",
     "postinstall": "prisma generate",
     "lint": "next lint",
-    "start": "next start"
+    "start": "next start",
+    "data": "npx tsx ./src/scripts/commune.ts"
   },
   "dependencies": {
     "@prisma/client": "^4.9.0",
@@ -23,6 +24,7 @@
     "zod": "^3.20.6"
   },
   "devDependencies": {
+    "@types/cheerio": "^0.22.31",
     "@types/eslint": "^8.21.1",
     "@types/node": "^18.14.0",
     "@types/prettier": "^2.7.2",
@@ -31,6 +33,7 @@
     "@typescript-eslint/eslint-plugin": "^5.53.0",
     "@typescript-eslint/parser": "^5.53.0",
     "autoprefixer": "^10.4.7",
+    "cheerio": "^1.0.0-rc.12",
     "eslint": "^8.34.0",
     "eslint-config-next": "^13.2.1",
     "postcss": "^8.4.14",
