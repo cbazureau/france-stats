@@ -1,0 +1,1 @@
+# Contains all the rawdata used by the scripts

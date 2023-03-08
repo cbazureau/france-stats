@@ -1,4 +1,6 @@
 /* eslint-disable @typescript-eslint/no-floating-promises */
+import path from "path";
+import fs from "fs";
 import cheerio from "cheerio";
 
 // Encapsulate top level await in an async function
@@ -69,7 +71,22 @@ import cheerio from "cheerio";
         return commune;
       })
     );
-    console.log(communes);
+    // save the communes array in a csv formatted file 'communes.csv' with the following columns: name, inhabitant, minHeight, maxHeight, area, codeInsee, zipCode, wikipediaLink, wikipediaPicture
+    const csv: string = [
+      "name;inhabitant;minHeight;maxHeight;area;codeInsee;zipCode;wikipediaLink;wikipediaPicture",
+      communes.map(
+        (commune) =>
+          `${commune.name};${commune.inhabitant};${commune.minHeight || ""};${
+            commune.maxHeight || ""
+          };${commune.area};${commune.codeInsee};${commune.zipCode};${
+            commune.wikipediaLink
+          };${commune.wikipediaPicture || ""}`
+      ),
+    ].join("\n");
+    fs.writeFileSync(
+      path.resolve(process.cwd(), "./prisma/data/communes.csv"),
+      csv
+    );
   } catch (error) {
     console.error(error);
   }
