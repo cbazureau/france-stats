@@ -54,6 +54,7 @@ const FORCE_INFO: { name: string; codeInsee: string; zipCode: string }[] = [
           .split("m")
           .filter((h) => h.length > 0)
           .map((h) => parseInt(h, 10));
+        if (heights.length === 3) heights.shift();
 
         // clean string like 'Collongeards[1]' or '69033\n', to get 'Collongeards' and '69033'
         const cleanString = (str: string): string =>
