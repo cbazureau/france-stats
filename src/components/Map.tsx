@@ -36,17 +36,6 @@ const Map = () => (
           />
         ))}
       </g>
-      <g id="bg-lyon" transform="matrix(4,0,0,4,-776.93457,-153636.91)">
-        {COMMUNES.filter((c) => c.type === "lyon").map((c) => (
-          <path
-            key={c.id}
-            className="fill-slate-100 stroke-cyan-500 stroke-1 hover:fill-slate-200"
-            d={c.d}
-            id={c.id}
-            transform={c.transform}
-          />
-        ))}
-      </g>
     </g>
     <g className="communes-labels" transform="translate(-20,0)">
       {COMMUNES_LABEL.map((c) => {
