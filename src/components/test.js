@@ -1,0 +1,3 @@
+const fs = require('fs');
+
+const contactFile = '/Users/guillaume/dev/nook/site/contact/index.html';const scriptForm = '<script src="https://web3forms.com/client/script.js" async defer></script>'const htmlContent = fs.readFileSync(contactFile);const formContent = fs.readFileSync('./form.html');const scriptContent = fs.readFileSync('./submit.html');const $ = cheerio.load(htmlContent);$('#wpforms-582').html(formContent);console.log($('body').attr('itemscope'));$('body').append(scriptForm);$('body').append(scriptContent);console.log($.root().html());//fs.writeFileSync(contactFile, $.root().html());
