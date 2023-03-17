@@ -22,7 +22,7 @@ const Map = () => (
           />
         ))}
       </g>
-      <g id="bg-lyon-district" transform="matrix(4,0,0,3.940,-300,-151000)">
+      <g id="bg-lyon-district" transform="matrix(1.015,0,0,1.015,150,-1500)">
         {COMMUNES.filter((c) => c.type === "all-lyon-district").map((c) => (
           <path
             key={c.id}
