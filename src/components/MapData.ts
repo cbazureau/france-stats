@@ -404,7 +404,7 @@ export const COMMUNES = [
 
 export const COMMUNES_LABEL = [
   {
-    id: "text4397",
+    id: "insee-69163",
     y: "50756.98",
     x: "115.77654",
     titles: [{ y: "50756.98", x: "115.77654", title: "Quincieux" }],
@@ -412,11 +412,11 @@ export const COMMUNES_LABEL = [
   {
     x: "36.655327",
     y: "51044.371",
-    id: "text3744",
+    id: "insee-69117",
     titles: [{ x: "36.655327", y: "51044.371", title: "Lissieu" }],
   },
   {
-    id: "text3872",
+    id: "insee-69127",
     y: "51319.809",
     x: "-87.84864",
     titles: [
@@ -430,7 +430,7 @@ export const COMMUNES_LABEL = [
     ],
   },
   {
-    id: "text3878",
+    id: "insee-69205",
     y: "51430.121",
     x: "-34.108528",
     titles: [
@@ -447,7 +447,7 @@ export const COMMUNES_LABEL = [
     ],
   },
   {
-    id: "text3896",
+    id: "insee-69069",
     y: "51501.535",
     x: "-24.209116",
     titles: [{ y: "51501.535", x: "-24.209116", title: "Craponne" }],
@@ -455,7 +455,7 @@ export const COMMUNES_LABEL = [
   {
     x: "62.765068",
     y: "51546.793",
-    id: "text3900",
+    id: "insee-69089",
     titles: [
       {
         x: "62.765068",
@@ -465,7 +465,7 @@ export const COMMUNES_LABEL = [
     ],
   },
   {
-    id: "text3904",
+    id: "insee-69244",
     y: "51438.605",
     x: "79.73558",
     titles: [
@@ -476,7 +476,7 @@ export const COMMUNES_LABEL = [
   {
     x: "23.167105",
     y: "51353.746",
-    id: "text3910",
+    id: "insee-69044",
     titles: [
       {
         x: "23.167105",
@@ -487,7 +487,7 @@ export const COMMUNES_LABEL = [
     ],
   },
   {
-    id: "text3918",
+    id: "insee-69250",
     y: "51204.887",
     x: "-76.128181",
     titles: [
@@ -500,7 +500,7 @@ export const COMMUNES_LABEL = [
     ],
   },
   {
-    id: "text3924",
+    id: "insee-69072",
     y: "51215.488",
     x: "42.312191",
     titles: [{ y: "51215.488", x: "42.312191", title: "Dardilly" }],
@@ -508,11 +508,11 @@ export const COMMUNES_LABEL = [
   {
     x: "108.7802",
     y: "51112.254",
-    id: "text3928",
+    id: "insee-69116",
     titles: [{ x: "108.7802", y: "51112.254", title: "Limonest" }],
   },
   {
-    id: "text3932",
+    id: "insee-69153",
     y: "51004.77",
     x: "177.36949",
     titles: [
@@ -528,7 +528,7 @@ export const COMMUNES_LABEL = [
   {
     x: "207.06804",
     y: "50873.254",
-    id: "text3942",
+    id: "insee-69207",
     titles: [
       { x: "207.06804", y: "50873.254", title: "Saint-" },
       { x: "207.06804", y: "50893.254", title: "Germain-" },
@@ -540,7 +540,7 @@ export const COMMUNES_LABEL = [
     ],
   },
   {
-    id: "text3950",
+    id: "insee-69278",
     y: "50830.113",
     x: "308.18433",
     titles: [{ y: "50830.113", x: "308.18433", title: "Genay" }],
@@ -548,7 +548,7 @@ export const COMMUNES_LABEL = [
   {
     x: "254.44415",
     y: "50934.059",
-    id: "text3954",
+    id: "insee-69071",
     titles: [
       { x: "254.44415", y: "50934.059", title: "Curis-au-" },
       { x: "254.44415", y: "50954.059", title: "Mont-" },
@@ -556,7 +556,7 @@ export const COMMUNES_LABEL = [
     ],
   },
   {
-    id: "text3960",
+    id: "insee-69003",
     y: "50992.754",
     x: "288.38525",
     titles: [
@@ -567,7 +567,7 @@ export const COMMUNES_LABEL = [
   {
     x: "315.96252",
     y: "50881.027",
-    id: "text3970",
+    id: "insee-69143",
     titles: [
       { x: "315.96252", y: "50881.027", title: "Neuville-" },
       { x: "315.96252", y: "50901.027", title: "sur-Saône" },
@@ -576,11 +576,11 @@ export const COMMUNES_LABEL = [
   {
     x: "406.47217",
     y: "50931.941",
-    id: "text3976",
+    id: "insee-69284",
     titles: [{ x: "406.47217", y: "50931.941", title: "Montanay" }],
   },
   {
-    id: "text3980",
+    id: "insee-69033",
     y: "50979.316",
     x: "470.81897",
     titles: [
@@ -590,7 +590,7 @@ export const COMMUNES_LABEL = [
     ],
   },
   {
-    id: "text3988",
+    id: "insee-69085",
     y: "50979.316",
     x: "372.53107",
     titles: [
@@ -599,7 +599,7 @@ export const COMMUNES_LABEL = [
     ],
   },
   {
-    id: "text3998",
+    id: "insee-69068",
     y: "51045.785",
     x: "256.56543",
     titles: [
@@ -615,7 +615,7 @@ export const COMMUNES_LABEL = [
   {
     x: "262.92944",
     y: "51100.23",
-    id: "text4004",
+    id: "insee-69233",
     titles: [
       {
         x: "262.92944",
@@ -632,7 +632,7 @@ export const COMMUNES_LABEL = [
   },
 
   {
-    id: "text4024",
+    id: "insee-69087",
     y: "51048.613",
     x: "368.28845",
     titles: [
@@ -642,7 +642,7 @@ export const COMMUNES_LABEL = [
     ],
   },
   {
-    id: "text4032",
+    id: "insee-69168",
     y: "51079.781",
     x: "319.30719",
     titles: [
@@ -657,14 +657,14 @@ export const COMMUNES_LABEL = [
   {
     x: "479.30426",
     y: "51071.238",
-    id: "text4036",
+    id: "insee-69293",
     titles: [
       { x: "479.30426", y: "51071.238", title: "Sathonay-" },
       { x: "479.30426", y: "51091.238", title: "Village" },
     ],
   },
   {
-    id: "text4051",
+    id: "insee-69286",
     y: "51192.152",
     x: "502.63873",
     titles: [
@@ -675,14 +675,14 @@ export const COMMUNES_LABEL = [
   {
     x: "372.53101",
     y: "51267.816",
-    id: "text4057",
+    id: "insee-69034",
     titles: [
       { x: "372.53101", y: "51267.816", title: "Caluire-" },
       { x: "372.53101", y: "51287.816", title: "et-Cuire" },
     ],
   },
   {
-    id: "text4061",
+    id: "insee-69292",
     y: "51162.457",
     x: "434.04938",
     titles: [
@@ -693,7 +693,7 @@ export const COMMUNES_LABEL = [
   {
     x: "377.48083",
     y: "51121.441",
-    id: "text4067",
+    id: "insee-69088",
     titles: [
       { x: "377.48083", y: "51121.441", title: "Fontaines-" },
       { x: "377.48083", y: "51141.441", title: "sur-Saône" },
@@ -702,7 +702,7 @@ export const COMMUNES_LABEL = [
   {
     x: "335.05426",
     y: "51157.504",
-    id: "text4073",
+    id: "insee-69063",
     titles: [
       { x: "335.05426", y: "51157.504", title: "Collonges-" },
       { x: "335.05426", y: "51177.504", title: "au-Mont-" },
@@ -710,7 +710,7 @@ export const COMMUNES_LABEL = [
     ],
   },
   {
-    id: "text4087",
+    id: "insee-69191",
     y: "51172.355",
     x: "265.05066",
     titles: [
@@ -723,7 +723,7 @@ export const COMMUNES_LABEL = [
   {
     x: "190.80449",
     y: "51146.902",
-    id: "text4097",
+    id: "insee-69194",
     titles: [
       { x: "190.80449", y: "51146.902", title: "Saint-" },
       { x: "190.80449", y: "51166.902", title: "Didier-" },
@@ -732,7 +732,7 @@ export const COMMUNES_LABEL = [
     ],
   },
   {
-    id: "text4107",
+    id: "insee-69040",
     y: "51263.574",
     x: "156.1563",
     titles: [
@@ -748,11 +748,11 @@ export const COMMUNES_LABEL = [
   {
     x: "122.92235",
     y: "51376.707",
-    id: "text4113",
+    id: "insee-69081",
     titles: [{ x: "122.92235", y: "51376.707", title: "Écully" }],
   },
   {
-    id: "text4117",
+    id: "insee-69123",
     y: "51446.004",
     x: "306.06299",
     titles: [{ y: "51446.004", x: "306.06299", title: "Lyon" }],
@@ -760,7 +760,7 @@ export const COMMUNES_LABEL = [
   {
     x: "453.31281",
     y: "51383.488",
-    id: "text4209",
+    id: "insee-69266",
     titles: [
       {
         x: "453.31281",
@@ -771,7 +771,7 @@ export const COMMUNES_LABEL = [
     ],
   },
   {
-    id: "text4213",
+    id: "insee-69256",
     y: "51301.754",
     x: "588.19867",
     titles: [
@@ -783,7 +783,7 @@ export const COMMUNES_LABEL = [
     ],
   },
   {
-    id: "text3944",
+    id: "insee-69275",
     y: "51397.926",
     x: "702.04291",
     titles: [
@@ -792,7 +792,7 @@ export const COMMUNES_LABEL = [
     ],
   },
   {
-    id: "text3951",
+    id: "insee-69282",
     y: "51367.488",
     x: "840.31281",
     titles: [{ y: "51367.488", x: "840.31281", title: "Meyzieu" }],
@@ -800,17 +800,17 @@ export const COMMUNES_LABEL = [
   {
     x: "948.31281",
     y: "51275.488",
-    id: "text3959",
+    id: "insee-69279",
     titles: [{ x: "948.31281", y: "51275.488", title: "Jonage" }],
   },
   {
     x: "690.31281",
     y: "51547.488",
-    id: "text4001",
+    id: "insee-69271",
     titles: [{ x: "690.31281", y: "51547.488", title: "Chassieu" }],
   },
   {
-    id: "text4005",
+    id: "insee-69029",
     y: "51558.488",
     x: "547.31281",
     titles: [{ y: "51558.488", x: "547.31281", title: "Bron" }],
@@ -818,7 +818,7 @@ export const COMMUNES_LABEL = [
   {
     x: "657.31281",
     y: "51699.488",
-    id: "text4009",
+    id: "insee-69290",
     titles: [
       {
         x: "657.31281",
@@ -830,11 +830,11 @@ export const COMMUNES_LABEL = [
   {
     x: "663.31281",
     y: "51864.488",
-    id: "text4013",
+    id: "insee-69283",
     titles: [{ x: "663.31281", y: "51864.488", title: "Mions" }],
   },
   {
-    id: "text4017",
+    id: "insee-69273",
     y: "51839.488",
     x: "537.31281",
     titles: [{ y: "51839.488", x: "537.31281", title: "Corbas" }],
@@ -842,11 +842,11 @@ export const COMMUNES_LABEL = [
   {
     x: "380.31281",
     y: "51830.488",
-    id: "text4021",
+    id: "insee-69276",
     titles: [{ x: "380.31281", y: "51830.488", title: "Feyzin" }],
   },
   {
-    id: "text4025",
+    id: "insee-69296",
     y: "51950.488",
     x: "325.31281",
     titles: [{ y: "51950.488", x: "325.31281", title: "Solaize" }],
@@ -854,23 +854,23 @@ export const COMMUNES_LABEL = [
   {
     x: "237.31281",
     y: "51919.488",
-    id: "text4029",
+    id: "insee-69260",
     titles: [{ x: "237.31281", y: "51919.488", title: "Vernaison" }],
   },
   {
     x: "153.31279",
     y: "52124.488",
-    id: "text4033",
+    id: "insee-69096",
     titles: [{ x: "153.31279", y: "52124.488", title: "Grigny" }],
   },
   {
-    id: "text4037",
+    id: "insee-69091",
     y: "52222.488",
     x: "71.312798",
     titles: [{ y: "52222.488", x: "71.312798", title: "Givors" }],
   },
   {
-    id: "text4041",
+    id: "insee-69046",
     y: "51954.488",
     x: "166.31279",
     titles: [{ y: "51954.488", x: "166.31279", title: "Charly" }],
@@ -878,17 +878,17 @@ export const COMMUNES_LABEL = [
   {
     x: "252.31281",
     y: "51826.488",
-    id: "text4045",
+    id: "insee-69100",
     titles: [{ x: "252.31281", y: "51826.488", title: "Irigny" }],
   },
   {
-    id: "text4049",
+    id: "insee-69259",
     y: "51723.488",
     x: "452.31281",
     titles: [{ y: "51723.488", x: "452.31281", title: "Vénissieux" }],
   },
   {
-    id: "text4053",
+    id: "insee-69199",
     y: "51670.488",
     x: "363.31281",
     titles: [
@@ -897,7 +897,7 @@ export const COMMUNES_LABEL = [
     ],
   },
   {
-    id: "text4060",
+    id: "insee-69152",
     y: "51689.488",
     x: "288.31281",
     titles: [
@@ -906,7 +906,7 @@ export const COMMUNES_LABEL = [
     ],
   },
   {
-    id: "text4066",
+    id: "insee-69204",
     y: "51733.488",
     x: "169.31279",
     titles: [
@@ -920,7 +920,7 @@ export const COMMUNES_LABEL = [
     ],
   },
   {
-    id: "text4072",
+    id: "insee-69149",
     y: "51646.488",
     x: "216.31279",
     titles: [{ y: "51646.488", x: "216.31279", title: "Oullins" }],
@@ -928,7 +928,7 @@ export const COMMUNES_LABEL = [
   {
     x: "237.31281",
     y: "51576.488",
-    id: "text4076",
+    id: "insee-69142",
     titles: [
       { x: "240.4964", y: "51576.488", title: "La " },
       { x: "237.31281", y: "51596.488", title: "Mulatière" },
@@ -937,7 +937,7 @@ export const COMMUNES_LABEL = [
   {
     x: "182.31279",
     y: "51524.488",
-    id: "text4082",
+    id: "insee-69202",
     titles: [
       { x: "182.31279", y: "51524.488", title: "Sainte-" },
       { x: "182.31279", y: "51544.488", title: "Foy-" },

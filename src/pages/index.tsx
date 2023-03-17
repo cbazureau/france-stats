@@ -26,20 +26,6 @@ const Home: NextPage = () => {
             {hello.data ? hello.data.greeting : "Loading tRPC query..."}
           </p>
         </div>
-        {COMMUNES_LABEL.map((c) => {
-          const title = c.titles.map((t) => t.title).join("");
-          const insee = COMMUNES_DATAS.find(
-            (cc) => cc.name.toLowerCase() === title.toLowerCase()
-          )?.codeInsee;
-          return (
-            <div key={c.id} className="text-white">
-              <span>
-                sed -i '' -E "s|'{c.id}'|'insee-{insee}'|g"
-                src/components/MapData.tsx";
-              </span>
-            </div>
-          );
-        })}
       </main>
     </>
   );
