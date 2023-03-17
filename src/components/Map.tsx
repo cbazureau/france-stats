@@ -8,22 +8,8 @@ const Map = () => (
     viewBox="-276.50058 50542.547 1423 1897"
   >
     <g className="communes" transform="translate(355.72521,474.95327)">
-      <g
-        id="bg-all-except-lyon"
-        transform="matrix(2,0,0,2,-618.74882,-51603.846)"
-      >
-        {COMMUNES.filter((c) => c.type === "all-except-lyon").map((c) => (
-          <path
-            key={c.id}
-            className="fill-slate-100 stroke-cyan-500 stroke-1 hover:fill-slate-200"
-            d={c.d}
-            id={c.id}
-            transform={c.transform}
-          />
-        ))}
-      </g>
-      <g id="bg-lyon-district" transform="matrix(1.015,0,0,1.015,150,-1500)">
-        {COMMUNES.filter((c) => c.type === "all-lyon-district").map((c) => (
+      <g transform="matrix(2,0,0,2,-618.74882,-51603.846)">
+        {COMMUNES.map((c) => (
           <path
             key={c.id}
             className="fill-slate-100 stroke-cyan-500 stroke-1 hover:fill-slate-200"
