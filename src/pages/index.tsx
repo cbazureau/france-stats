@@ -2,7 +2,7 @@ import { type NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
 import Map from "../components/Map";
-import { COMMUNES_DATAS, COMMUNES_LABEL } from "../components/MapData";
+import { COMMUNES_DATAS, COMMUNES } from "../components/MapData";
 
 import { api } from "~/utils/api";
 
