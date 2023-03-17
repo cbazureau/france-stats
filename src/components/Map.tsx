@@ -12,7 +12,7 @@ const Map = () => (
         {COMMUNES.map((c) => (
           <path
             key={c.id}
-            className="fill-slate-100 stroke-cyan-500 stroke-1 hover:fill-slate-200"
+            className="fill-indigo-50 stroke-indigo-600 stroke-1 hover:fill-indigo-100"
             d={c.d}
             id={c.id}
             transform={c.transform}
@@ -24,7 +24,13 @@ const Map = () => (
       {COMMUNES_LABEL.map((c) => {
         const { id, x, y, titles } = c;
         return (
-          <text key={id} id={id} x={x} y={y} className="text-xs">
+          <text
+            key={id}
+            id={id}
+            x={x}
+            y={y}
+            className="fill-indigo-600 text-xs"
+          >
             {titles.map((t, i) => (
               <tspan key={i} x={t.x} y={t.y}>
                 {t.title}
