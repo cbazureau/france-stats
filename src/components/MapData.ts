@@ -407,28 +407,24 @@ export const COMMUNES_LABEL = [
     id: "text4397",
     y: "50756.98",
     x: "115.77654",
-    titles: [
-      { y: "50756.98", x: "115.77654", id: "tspan4401", title: "Quincieux" },
-    ],
+    titles: [{ y: "50756.98", x: "115.77654", title: "Quincieux" }],
   },
   {
     x: "36.655327",
     y: "51044.371",
     id: "text3744",
-    titles: [
-      { x: "36.655327", y: "51044.371", id: "tspan3746", title: "Lissieu" },
-    ],
+    titles: [{ x: "36.655327", y: "51044.371", title: "Lissieu" }],
   },
   {
     id: "text3872",
     y: "51319.809",
     x: "-87.84864",
     titles: [
-      { y: "51319.809", x: "-87.84864", id: "tspan3874", title: "Marcy-" },
+      { y: "51319.809", x: "-87.84864", title: "Marcy-" },
       {
         y: "51339.809",
         x: "-87.84864",
-        id: "tspan3876",
+
         title: "l'Étoile",
       },
     ],
@@ -441,13 +437,11 @@ export const COMMUNES_LABEL = [
       {
         y: "51430.121",
         x: "-34.108528",
-        id: "tspan3880",
         title: "Saint-Genis-",
       },
       {
         y: "51450.121",
         x: "-34.108528",
-        id: "tspan3888",
         title: "les-Ollières",
       },
     ],
@@ -456,9 +450,7 @@ export const COMMUNES_LABEL = [
     id: "text3896",
     y: "51501.535",
     x: "-24.209116",
-    titles: [
-      { y: "51501.535", x: "-24.209116", id: "tspan3898", title: "Craponne" },
-    ],
+    titles: [{ y: "51501.535", x: "-24.209116", title: "Craponne" }],
   },
   {
     x: "62.765068",
@@ -466,7 +458,6 @@ export const COMMUNES_LABEL = [
     id: "text3900",
     titles: [
       {
-        id: "tspan3902",
         x: "62.765068",
         y: "51546.793",
         title: "Francheville",
@@ -478,8 +469,8 @@ export const COMMUNES_LABEL = [
     y: "51438.605",
     x: "79.73558",
     titles: [
-      { y: "51438.605", x: "79.73558", id: "tspan3906", title: "Tassin-la-" },
-      { y: "51458.605", x: "79.73558", id: "tspan3908", title: "Demi-Lune" },
+      { y: "51438.605", x: "79.73558", title: "Tassin-la-" },
+      { y: "51458.605", x: "79.73558", title: "Demi-Lune" },
     ],
   },
   {
@@ -488,12 +479,11 @@ export const COMMUNES_LABEL = [
     id: "text3910",
     titles: [
       {
-        id: "tspan3912",
         x: "23.167105",
         y: "51353.746",
         title: "Charbonnières-",
       },
-      { x: "23.167105", y: "51373.746", id: "tspan3916", title: "les-Bains" },
+      { x: "23.167105", y: "51373.746", title: "les-Bains" },
     ],
   },
   {
@@ -502,40 +492,35 @@ export const COMMUNES_LABEL = [
     x: "-76.128181",
     titles: [
       {
-        id: "tspan3920",
         y: "51204.887",
         x: "-76.128181",
         title: "La Tour-de-",
       },
-      { y: "51224.887", x: "-76.128181", id: "tspan3922", title: "Salvagny" },
+      { y: "51224.887", x: "-76.128181", title: "Salvagny" },
     ],
   },
   {
     id: "text3924",
     y: "51215.488",
     x: "42.312191",
-    titles: [
-      { id: "tspan3926", y: "51215.488", x: "42.312191", title: "Dardilly" },
-    ],
+    titles: [{ y: "51215.488", x: "42.312191", title: "Dardilly" }],
   },
   {
     x: "108.7802",
     y: "51112.254",
     id: "text3928",
-    titles: [
-      { x: "108.7802", y: "51112.254", id: "tspan3930", title: "Limonest" },
-    ],
+    titles: [{ x: "108.7802", y: "51112.254", title: "Limonest" }],
   },
   {
     id: "text3932",
     y: "51004.77",
     x: "177.36949",
     titles: [
-      { id: "tspan3934", y: "51004.77", x: "177.36949", title: "Poleymieux-" },
+      { y: "51004.77", x: "177.36949", title: "Poleymieux-" },
       {
         y: "51024.77",
         x: "177.36949",
-        id: "tspan3936",
+
         title: "au-Mont-d'Or",
       },
     ],
@@ -545,10 +530,9 @@ export const COMMUNES_LABEL = [
     y: "50873.254",
     id: "text3942",
     titles: [
-      { x: "207.06804", y: "50873.254", id: "tspan3944", title: "Saint-" },
-      { x: "207.06804", y: "50893.254", id: "tspan3948", title: "Germain-" },
+      { x: "207.06804", y: "50873.254", title: "Saint-" },
+      { x: "207.06804", y: "50893.254", title: "Germain-" },
       {
-        id: "tspan3946",
         x: "207.06804",
         y: "50913.254",
         title: "au-Mont-d'Or",
@@ -559,18 +543,16 @@ export const COMMUNES_LABEL = [
     id: "text3950",
     y: "50830.113",
     x: "308.18433",
-    titles: [
-      { id: "tspan3952", y: "50830.113", x: "308.18433", title: "Genay" },
-    ],
+    titles: [{ y: "50830.113", x: "308.18433", title: "Genay" }],
   },
   {
     x: "254.44415",
     y: "50934.059",
     id: "text3954",
     titles: [
-      { x: "254.44415", y: "50934.059", id: "tspan3956", title: "Curis-au-" },
-      { id: "tspan3958", x: "254.44415", y: "50954.059", title: "Mont-" },
-      { x: "254.44415", y: "50974.059", id: "tspan4085", title: "d'Or" },
+      { x: "254.44415", y: "50934.059", title: "Curis-au-" },
+      { x: "254.44415", y: "50954.059", title: "Mont-" },
+      { x: "254.44415", y: "50974.059", title: "d'Or" },
     ],
   },
   {
@@ -578,8 +560,8 @@ export const COMMUNES_LABEL = [
     y: "50992.754",
     x: "288.38525",
     titles: [
-      { y: "50992.754", x: "288.38525", id: "tspan3964", title: "Albigny-" },
-      { y: "51012.754", x: "288.38525", id: "tspan3968", title: "sur-Saône" },
+      { y: "50992.754", x: "288.38525", title: "Albigny-" },
+      { y: "51012.754", x: "288.38525", title: "sur-Saône" },
     ],
   },
   {
@@ -587,26 +569,24 @@ export const COMMUNES_LABEL = [
     y: "50881.027",
     id: "text3970",
     titles: [
-      { x: "315.96252", y: "50881.027", id: "tspan3972", title: "Neuville-" },
-      { x: "315.96252", y: "50901.027", id: "tspan3974", title: "sur-Saône" },
+      { x: "315.96252", y: "50881.027", title: "Neuville-" },
+      { x: "315.96252", y: "50901.027", title: "sur-Saône" },
     ],
   },
   {
     x: "406.47217",
     y: "50931.941",
     id: "text3976",
-    titles: [
-      { x: "406.47217", y: "50931.941", id: "tspan3978", title: "Montanay" },
-    ],
+    titles: [{ x: "406.47217", y: "50931.941", title: "Montanay" }],
   },
   {
     id: "text3980",
     y: "50979.316",
     x: "470.81897",
     titles: [
-      { id: "tspan3982", y: "50979.316", x: "470.81897", title: "Cailloux-" },
-      { y: "50999.316", x: "470.81897", id: "tspan3984", title: "sur-" },
-      { y: "51019.316", x: "470.81897", id: "tspan3986", title: "Fontaines" },
+      { y: "50979.316", x: "470.81897", title: "Cailloux-" },
+      { y: "50999.316", x: "470.81897", title: "sur-" },
+      { y: "51019.316", x: "470.81897", title: "Fontaines" },
     ],
   },
   {
@@ -614,8 +594,8 @@ export const COMMUNES_LABEL = [
     y: "50979.316",
     x: "372.53107",
     titles: [
-      { id: "tspan3990", y: "50979.316", x: "372.53107", title: "Fleurieu-" },
-      { y: "50999.316", x: "372.53107", id: "tspan3992", title: "sur-Saône" },
+      { y: "50979.316", x: "372.53107", title: "Fleurieu-" },
+      { y: "50999.316", x: "372.53107", title: "sur-Saône" },
     ],
   },
   {
@@ -623,11 +603,11 @@ export const COMMUNES_LABEL = [
     y: "51045.785",
     x: "256.56543",
     titles: [
-      { id: "tspan4000", y: "51045.785", x: "256.56543", title: "Couzon-au-" },
+      { y: "51045.785", x: "256.56543", title: "Couzon-au-" },
       {
         y: "51065.785",
         x: "256.56543",
-        id: "tspan4002",
+
         title: "Mont-d'Or",
       },
     ],
@@ -640,11 +620,10 @@ export const COMMUNES_LABEL = [
       {
         x: "262.92944",
         y: "51100.23",
-        id: "tspan4006",
+
         title: "Saint-Romain-",
       },
       {
-        id: "tspan4008",
         x: "262.92944",
         y: "51120.23",
         title: "au-Mont-d'Or",
@@ -657,9 +636,9 @@ export const COMMUNES_LABEL = [
     y: "51048.613",
     x: "368.28845",
     titles: [
-      { id: "tspan4026", y: "51048.613", x: "368.28845", title: "Fontaines-" },
-      { y: "51068.613", x: "368.28845", id: "tspan4028", title: "Saint-" },
-      { y: "51088.613", x: "368.28845", id: "tspan4030", title: "Martin" },
+      { y: "51048.613", x: "368.28845", title: "Fontaines-" },
+      { y: "51068.613", x: "368.28845", title: "Saint-" },
+      { y: "51088.613", x: "368.28845", title: "Martin" },
     ],
   },
   {
@@ -668,12 +647,11 @@ export const COMMUNES_LABEL = [
     x: "319.30719",
     titles: [
       {
-        id: "tspan4034",
         y: "51075.781",
         x: "319.30719",
         title: "Rochetaillée",
       },
-      { id: "tspan4034", y: "51095.781", x: "319.30719", title: "sur-Saône" },
+      { y: "51095.781", x: "319.30719", title: "sur-Saône" },
     ],
   },
   {
@@ -681,8 +659,8 @@ export const COMMUNES_LABEL = [
     y: "51071.238",
     id: "text4036",
     titles: [
-      { id: "tspan4042", x: "479.30426", y: "51071.238", title: "Sathonay-" },
-      { x: "479.30426", y: "51091.238", id: "tspan4049", title: "Village" },
+      { x: "479.30426", y: "51071.238", title: "Sathonay-" },
+      { x: "479.30426", y: "51091.238", title: "Village" },
     ],
   },
   {
@@ -690,8 +668,8 @@ export const COMMUNES_LABEL = [
     y: "51192.152",
     x: "502.63873",
     titles: [
-      { id: "tspan4053", y: "51192.152", x: "502.63873", title: "Rillieux-" },
-      { y: "51212.152", x: "502.63873", id: "tspan4055", title: "la-Pape" },
+      { y: "51192.152", x: "502.63873", title: "Rillieux-" },
+      { y: "51212.152", x: "502.63873", title: "la-Pape" },
     ],
   },
   {
@@ -699,8 +677,8 @@ export const COMMUNES_LABEL = [
     y: "51267.816",
     id: "text4057",
     titles: [
-      { x: "372.53101", y: "51267.816", id: "tspan4059", title: "Caluire-" },
-      { x: "372.53101", y: "51287.816", id: "tspan4121", title: "et-Cuire" },
+      { x: "372.53101", y: "51267.816", title: "Caluire-" },
+      { x: "372.53101", y: "51287.816", title: "et-Cuire" },
     ],
   },
   {
@@ -708,8 +686,8 @@ export const COMMUNES_LABEL = [
     y: "51162.457",
     x: "434.04938",
     titles: [
-      { y: "51162.457", x: "434.04938", id: "tspan4063", title: "Sathonay-" },
-      { id: "tspan4065", y: "51182.457", x: "434.04938", title: "Camp" },
+      { y: "51162.457", x: "434.04938", title: "Sathonay-" },
+      { y: "51182.457", x: "434.04938", title: "Camp" },
     ],
   },
   {
@@ -717,8 +695,8 @@ export const COMMUNES_LABEL = [
     y: "51121.441",
     id: "text4067",
     titles: [
-      { x: "377.48083", y: "51121.441", id: "tspan4069", title: "Fontaines-" },
-      { id: "tspan4071", x: "377.48083", y: "51141.441", title: "sur-Saône" },
+      { x: "377.48083", y: "51121.441", title: "Fontaines-" },
+      { x: "377.48083", y: "51141.441", title: "sur-Saône" },
     ],
   },
   {
@@ -726,9 +704,9 @@ export const COMMUNES_LABEL = [
     y: "51157.504",
     id: "text4073",
     titles: [
-      { x: "335.05426", y: "51157.504", id: "tspan4075", title: "Collonges-" },
-      { id: "tspan4077", x: "335.05426", y: "51177.504", title: "au-Mont-" },
-      { x: "335.05426", y: "51197.504", id: "tspan4083", title: "d'Or" },
+      { x: "335.05426", y: "51157.504", title: "Collonges-" },
+      { x: "335.05426", y: "51177.504", title: "au-Mont-" },
+      { x: "335.05426", y: "51197.504", title: "d'Or" },
     ],
   },
   {
@@ -736,10 +714,10 @@ export const COMMUNES_LABEL = [
     y: "51172.355",
     x: "265.05066",
     titles: [
-      { id: "tspan4089", y: "51172.355", x: "265.05066", title: "Saint-" },
-      { y: "51192.355", x: "265.05066", id: "tspan4095", title: "Cyr-" },
-      { y: "51212.355", x: "265.05066", id: "tspan4091", title: "au-Mont-" },
-      { id: "tspan4093", y: "51232.355", x: "265.05066", title: "d'Or" },
+      { y: "51172.355", x: "265.05066", title: "Saint-" },
+      { y: "51192.355", x: "265.05066", title: "Cyr-" },
+      { y: "51212.355", x: "265.05066", title: "au-Mont-" },
+      { y: "51232.355", x: "265.05066", title: "d'Or" },
     ],
   },
   {
@@ -747,10 +725,10 @@ export const COMMUNES_LABEL = [
     y: "51146.902",
     id: "text4097",
     titles: [
-      { x: "190.80449", y: "51146.902", id: "tspan4099", title: "Saint-" },
-      { id: "tspan4101", x: "190.80449", y: "51166.902", title: "Didier-" },
-      { id: "tspan4103", x: "190.80449", y: "51186.902", title: "au-Mont-" },
-      { x: "190.80449", y: "51206.902", id: "tspan4105", title: "d'Or" },
+      { x: "190.80449", y: "51146.902", title: "Saint-" },
+      { x: "190.80449", y: "51166.902", title: "Didier-" },
+      { x: "190.80449", y: "51186.902", title: "au-Mont-" },
+      { x: "190.80449", y: "51206.902", title: "d'Or" },
     ],
   },
   {
@@ -758,11 +736,11 @@ export const COMMUNES_LABEL = [
     y: "51263.574",
     x: "156.1563",
     titles: [
-      { id: "tspan4109", y: "51263.574", x: "156.1563", title: "Champagne-" },
+      { y: "51263.574", x: "156.1563", title: "Champagne-" },
       {
         y: "51283.574",
         x: "156.1563",
-        id: "tspan4111",
+
         title: "au-Mont-d'Or",
       },
     ],
@@ -771,17 +749,13 @@ export const COMMUNES_LABEL = [
     x: "122.92235",
     y: "51376.707",
     id: "text4113",
-    titles: [
-      { x: "122.92235", y: "51376.707", id: "tspan4115", title: "Écully" },
-    ],
+    titles: [{ x: "122.92235", y: "51376.707", title: "Écully" }],
   },
   {
     id: "text4117",
     y: "51446.004",
     x: "306.06299",
-    titles: [
-      { id: "tspan4119", y: "51446.004", x: "306.06299", title: "Lyon" },
-    ],
+    titles: [{ y: "51446.004", x: "306.06299", title: "Lyon" }],
   },
   {
     x: "453.31281",
@@ -791,7 +765,7 @@ export const COMMUNES_LABEL = [
       {
         x: "453.31281",
         y: "51383.488",
-        id: "tspan4211",
+
         title: "Villeurbanne",
       },
     ],
@@ -802,7 +776,6 @@ export const COMMUNES_LABEL = [
     x: "588.19867",
     titles: [
       {
-        id: "tspan4215",
         y: "51301.754",
         x: "588.19867",
         title: "Vaulx-en-Velin",
@@ -814,41 +787,33 @@ export const COMMUNES_LABEL = [
     y: "51397.926",
     x: "702.04291",
     titles: [
-      { id: "tspan3947", y: "51397.926", x: "702.04291", title: "Décines-" },
-      { y: "51417.926", x: "702.04291", id: "tspan3949", title: "Charpieu" },
+      { y: "51397.926", x: "702.04291", title: "Décines-" },
+      { y: "51417.926", x: "702.04291", title: "Charpieu" },
     ],
   },
   {
     id: "text3951",
     y: "51367.488",
     x: "840.31281",
-    titles: [
-      { y: "51367.488", x: "840.31281", id: "tspan3955", title: "Meyzieu" },
-    ],
+    titles: [{ y: "51367.488", x: "840.31281", title: "Meyzieu" }],
   },
   {
     x: "948.31281",
     y: "51275.488",
     id: "text3959",
-    titles: [
-      { id: "tspan3961", x: "948.31281", y: "51275.488", title: "Jonage" },
-    ],
+    titles: [{ x: "948.31281", y: "51275.488", title: "Jonage" }],
   },
   {
     x: "690.31281",
     y: "51547.488",
     id: "text4001",
-    titles: [
-      { id: "tspan4003", x: "690.31281", y: "51547.488", title: "Chassieu" },
-    ],
+    titles: [{ x: "690.31281", y: "51547.488", title: "Chassieu" }],
   },
   {
     id: "text4005",
     y: "51558.488",
     x: "547.31281",
-    titles: [
-      { y: "51558.488", x: "547.31281", id: "tspan4007", title: "Bron" },
-    ],
+    titles: [{ y: "51558.488", x: "547.31281", title: "Bron" }],
   },
   {
     x: "657.31281",
@@ -856,7 +821,6 @@ export const COMMUNES_LABEL = [
     id: "text4009",
     titles: [
       {
-        id: "tspan4011",
         x: "657.31281",
         y: "51699.488",
         title: "Saint-Priest",
@@ -867,89 +831,69 @@ export const COMMUNES_LABEL = [
     x: "663.31281",
     y: "51864.488",
     id: "text4013",
-    titles: [
-      { id: "tspan4015", x: "663.31281", y: "51864.488", title: "Mions" },
-    ],
+    titles: [{ x: "663.31281", y: "51864.488", title: "Mions" }],
   },
   {
     id: "text4017",
     y: "51839.488",
     x: "537.31281",
-    titles: [
-      { y: "51839.488", x: "537.31281", id: "tspan4019", title: "Corbas" },
-    ],
+    titles: [{ y: "51839.488", x: "537.31281", title: "Corbas" }],
   },
   {
     x: "380.31281",
     y: "51830.488",
     id: "text4021",
-    titles: [
-      { id: "tspan4023", x: "380.31281", y: "51830.488", title: "Feyzin" },
-    ],
+    titles: [{ x: "380.31281", y: "51830.488", title: "Feyzin" }],
   },
   {
     id: "text4025",
     y: "51950.488",
     x: "325.31281",
-    titles: [
-      { y: "51950.488", x: "325.31281", id: "tspan4027", title: "Solaize" },
-    ],
+    titles: [{ y: "51950.488", x: "325.31281", title: "Solaize" }],
   },
   {
     x: "237.31281",
     y: "51919.488",
     id: "text4029",
-    titles: [
-      { id: "tspan4031", x: "237.31281", y: "51919.488", title: "Vernaison" },
-    ],
+    titles: [{ x: "237.31281", y: "51919.488", title: "Vernaison" }],
   },
   {
     x: "153.31279",
     y: "52124.488",
     id: "text4033",
-    titles: [
-      { id: "tspan4035", x: "153.31279", y: "52124.488", title: "Grigny" },
-    ],
+    titles: [{ x: "153.31279", y: "52124.488", title: "Grigny" }],
   },
   {
     id: "text4037",
     y: "52222.488",
     x: "71.312798",
-    titles: [
-      { y: "52222.488", x: "71.312798", id: "tspan4039", title: "Givors" },
-    ],
+    titles: [{ y: "52222.488", x: "71.312798", title: "Givors" }],
   },
   {
     id: "text4041",
     y: "51954.488",
     x: "166.31279",
-    titles: [
-      { y: "51954.488", x: "166.31279", id: "tspan4043", title: "Charly" },
-    ],
+    titles: [{ y: "51954.488", x: "166.31279", title: "Charly" }],
   },
   {
     x: "252.31281",
     y: "51826.488",
     id: "text4045",
-    titles: [
-      { id: "tspan4047", x: "252.31281", y: "51826.488", title: "Irigny" },
-    ],
+    titles: [{ x: "252.31281", y: "51826.488", title: "Irigny" }],
   },
   {
     id: "text4049",
     y: "51723.488",
     x: "452.31281",
-    titles: [
-      { y: "51723.488", x: "452.31281", id: "tspan4051", title: "Vénissieux" },
-    ],
+    titles: [{ y: "51723.488", x: "452.31281", title: "Vénissieux" }],
   },
   {
     id: "text4053",
     y: "51670.488",
     x: "363.31281",
     titles: [
-      { y: "51670.488", x: "363.31281", id: "tspan4056", title: "Saint-" },
-      { y: "51690.488", x: "363.31281", id: "tspan4058", title: "Fons" },
+      { y: "51670.488", x: "363.31281", title: "Saint-" },
+      { y: "51690.488", x: "363.31281", title: "Fons" },
     ],
   },
   {
@@ -957,8 +901,8 @@ export const COMMUNES_LABEL = [
     y: "51689.488",
     x: "288.31281",
     titles: [
-      { y: "51689.488", x: "288.31281", id: "tspan4062", title: "Pierre-" },
-      { y: "51709.488", x: "288.31281", id: "tspan4064", title: "Bénite" },
+      { y: "51689.488", x: "288.31281", title: "Pierre-" },
+      { y: "51709.488", x: "288.31281", title: "Bénite" },
     ],
   },
   {
@@ -969,27 +913,25 @@ export const COMMUNES_LABEL = [
       {
         y: "51733.488",
         x: "169.31279",
-        id: "tspan4068",
+
         title: "Saint-Genis-",
       },
-      { y: "51753.488", x: "169.31279", id: "tspan4070", title: "Laval" },
+      { y: "51753.488", x: "169.31279", title: "Laval" },
     ],
   },
   {
     id: "text4072",
     y: "51646.488",
     x: "216.31279",
-    titles: [
-      { y: "51646.488", x: "216.31279", id: "tspan4074", title: "Oullins" },
-    ],
+    titles: [{ y: "51646.488", x: "216.31279", title: "Oullins" }],
   },
   {
     x: "237.31281",
     y: "51576.488",
     id: "text4076",
     titles: [
-      { id: "tspan4078", x: "240.4964", y: "51576.488", title: "La" },
-      { x: "237.31281", y: "51596.488", id: "tspan4080", title: "Mulatière" },
+      { x: "240.4964", y: "51576.488", title: "La" },
+      { x: "237.31281", y: "51596.488", title: "Mulatière" },
     ],
   },
   {
@@ -997,9 +939,9 @@ export const COMMUNES_LABEL = [
     y: "51524.488",
     id: "text4082",
     titles: [
-      { id: "tspan4084", x: "182.31279", y: "51524.488", title: "Sainte-" },
-      { x: "182.31279", y: "51544.488", id: "tspan4088", title: "Foy-" },
-      { x: "182.31279", y: "51564.488", id: "tspan4086", title: "lès-Lyon" },
+      { x: "182.31279", y: "51524.488", title: "Sainte-" },
+      { x: "182.31279", y: "51544.488", title: "Foy-" },
+      { x: "182.31279", y: "51564.488", title: "lès-Lyon" },
     ],
   },
 ];
