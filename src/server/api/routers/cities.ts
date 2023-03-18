@@ -15,9 +15,9 @@ export const citiesRouter = createTRPCRouter({
   //   return ctx.prisma.commune.findMany();
   // }),
   getMap: publicProcedure
-    .input(z.object({ city: z.string() }))
+    .input(z.object({ zone: z.string() }))
     .query(({ input }) => {
-      if (input.city === "lyon") return LYON_CITIES;
+      if (input.zone === "lyon") return LYON_CITIES;
       return [];
     }),
 });

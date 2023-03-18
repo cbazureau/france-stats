@@ -1,4 +1,6 @@
-export const CITIES = [
+import { type CityType } from "./commun.types";
+
+export const CITIES: CityType[] = [
   {
     name: "Lyon",
     inhabitant: "Lyonnais",

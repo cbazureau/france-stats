@@ -1,18 +1,22 @@
-import { CITIES } from "./Map.lyon";
+// import { CITIES } from "./Map.lyon";
 import { useState } from "react";
+import { type CityType } from "./commun.types";
 
-const Map = () => {
+type Props = {
+  cities: CityType[];
+};
+
+const Map = ({ cities }: Props) => {
   const [hovered, setHovered] = useState<number | null>(null);
   return (
     <svg
-      width="1423"
-      height="1897"
+      style={{ width: "100%", aspectRatio: "1423/1897", height: "auto" }}
       preserveAspectRatio="xMidYMax"
       viewBox="-276 50542 1423 1897"
     >
       <g className="city-paths" transform="translate(355,475)">
         <g transform="matrix(2,0,0,2,-618.74882,-51603.846)">
-          {CITIES.map((c) => {
+          {cities.map((c) => {
             const { codeInsee, svgPath } = c;
             return (
               <path
@@ -29,7 +33,7 @@ const Map = () => {
         </g>
       </g>
       <g className="city-labels" transform="translate(-20,0)">
-        {CITIES.map((c) => {
+        {cities.map((c) => {
           const { codeInsee, svgLabel } = c;
           return (
             <text
