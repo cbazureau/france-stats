@@ -6,7 +6,7 @@ import Map from "../components/MapSvg.lyon";
 import { api } from "~/utils/api";
 
 const Home: NextPage = () => {
-  const hello = api.commune.hello.useQuery({ text: "from tRPC" });
+  const hello = api.cities.hello.useQuery({ text: "from tRPC" });
 
   return (
     <>

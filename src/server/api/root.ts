@@ -1,5 +1,5 @@
 import { createTRPCRouter } from "~/server/api/trpc";
-import { communeRouter } from "~/server/api/routers/commune";
+import { citiesRouter } from "~/server/api/routers/cities";
 
 /**
  * This is the primary router for your server.
@@ -7,7 +7,7 @@ import { communeRouter } from "~/server/api/routers/commune";
  * All routers added in /api/routers should be manually added here.
  */
 export const appRouter = createTRPCRouter({
-  commune: communeRouter,
+  cities: citiesRouter,
 });
 
 // export type definition of API
