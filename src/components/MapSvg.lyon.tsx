@@ -8,10 +8,9 @@ const Map = () => {
       width="1423"
       height="1897"
       preserveAspectRatio="xMidYMax"
-      onMouseLeave={() => setHovered(null)}
-      viewBox="-276.50058 50542.547 1423 1897"
+      viewBox="-276 50542 1423 1897"
     >
-      <g className="communes" transform="translate(355.72521,474.95327)">
+      <g className="city-paths" transform="translate(355.72521,474.95327)">
         <g transform="matrix(2,0,0,2,-618.74882,-51603.846)">
           {CITIES.map((c) => {
             const { codeInsee, svgPath } = c;
@@ -22,13 +21,14 @@ const Map = () => {
                 d={svgPath.d}
                 id={codeInsee.toString()}
                 onMouseEnter={() => setHovered(codeInsee)}
+                onMouseLeave={() => setHovered(null)}
                 transform={svgPath.transform}
               />
             );
           })}
         </g>
       </g>
-      <g className="communes-labels" transform="translate(-20,0)">
+      <g className="city-labels" transform="translate(-20,0)">
         {CITIES.map((c) => {
           const { codeInsee, svgLabel } = c;
           return (
@@ -39,8 +39,8 @@ const Map = () => {
               y={svgLabel.y}
               className={
                 hovered === codeInsee
-                  ? "fill-indigo-600 text-xs"
-                  : "hidden fill-indigo-400 text-xs"
+                  ? "pointer-events-none fill-indigo-600 text-xs"
+                  : "pointer-events-none hidden fill-indigo-400 text-xs"
               }
             >
               {svgLabel.titles.map((t, i) => (
