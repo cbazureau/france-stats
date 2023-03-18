@@ -10,14 +10,14 @@ const Map = () => {
       preserveAspectRatio="xMidYMax"
       viewBox="-276 50542 1423 1897"
     >
-      <g className="city-paths" transform="translate(355.72521,474.95327)">
+      <g className="city-paths" transform="translate(355,475)">
         <g transform="matrix(2,0,0,2,-618.74882,-51603.846)">
           {CITIES.map((c) => {
             const { codeInsee, svgPath } = c;
             return (
               <path
                 key={codeInsee}
-                className="fill-indigo-50 stroke-indigo-600 stroke-1 hover:fill-indigo-100"
+                className="fill-indigo-50 stroke-indigo-600 stroke-1 opacity-80 hover:opacity-100"
                 d={svgPath.d}
                 id={codeInsee.toString()}
                 onMouseEnter={() => setHovered(codeInsee)}
