@@ -1,6 +1,5 @@
-// import { CITIES } from "./Map.lyon";
 import { useState } from "react";
-import { type CityType } from "./commun.types";
+import { type CityType } from "../data/commun.types";
 
 type Props = {
   cities: CityType[];

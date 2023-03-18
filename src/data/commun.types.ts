@@ -22,3 +22,8 @@ export type CityType = {
     transform?: string;
   };
 };
+
+export type ZoneType = {
+  name: string;
+  label: string;
+};

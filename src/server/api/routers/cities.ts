@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { CITIES as LYON_CITIES } from "../../../components/Map.lyon";
+import { CITIES as LYON_CITIES } from "../../../data/data.lyon";
 
 import { createTRPCRouter, publicProcedure } from "~/server/api/trpc";
 
