@@ -10,7 +10,7 @@
     "start": "next start",
     "data:lyon.cities": "npx tsx ./src/scripts/lyon.cities.ts",
     "data:lyon.districts": "npx tsx ./src/scripts/lyon.districts.ts",
-    "data:lyon.crimes": "npx tsx ./src/scripts/lyon.crimes.ts"
+    "data:lyon.stats": "npx tsx ./src/scripts/lyon.stats.ts"
   },
   "dependencies": {
     "@prisma/client": "^4.9.0",
