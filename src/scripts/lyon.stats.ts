@@ -55,6 +55,7 @@ while ((line = lines.next())) {
         year: 2000 + parseInt(year, 10),
         name: tabs[2] || "",
         category: "crimes",
+        canBeRelative: true,
         value: parseInt(value || "", 10),
       });
     }

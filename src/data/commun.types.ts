@@ -33,5 +33,6 @@ export type StatType = {
   codeInsee: number;
   year: number;
   category: string;
+  canBeRelative?: boolean;
   value: number;
 };
