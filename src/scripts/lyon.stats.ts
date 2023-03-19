@@ -18,11 +18,13 @@ const codeInsees = [
   ...LYON_DISTRICTS.map((district) => district.codeInsee),
 ];
 
+const ALL_CITIES = [...LYON_CITIES, ...LYON_DISTRICTS];
+
 let line;
 const entries: StatType[] = [];
 
 while ((line = lines.next())) {
-  const currentLine = line.toString("ascii") || "";
+  const currentLine = line.toString("utf8") || "";
   const codeInsee = parseInt(currentLine.slice(0, 5), 10);
   const year = currentLine.toString().slice(6, 8) || "0";
   if (codeInsees.includes(codeInsee) && year === "21") {
@@ -43,17 +45,26 @@ while ((line = lines.next())) {
       entries.push({
         codeInsee,
         year: 2021,
-        name: "Population",
+        name: "population",
         category: "general",
         value: parseInt(pop || "", 10),
       });
+      const area = ALL_CITIES.find((c) => c.codeInsee === codeInsee)?.area;
+      if (area)
+        entries.push({
+          codeInsee,
+          year: 2021,
+          name: "density",
+          category: "general",
+          value: Math.round((parseInt(pop || "", 10) / area) * 100) / 100,
+        });
     }
     if (value !== "NA") {
       // Add crimes.XXX stats
       entries.push({
         codeInsee,
         year: 2000 + parseInt(year, 10),
-        name: tabs[2] || "",
+        name: (tabs[2] || "").toLowerCase().replace(/ /g, "-"),
         category: "crimes",
         canBeRelative: true,
         value: parseInt(value || "", 10),
