@@ -27,3 +27,11 @@ export type ZoneType = {
   name: string;
   label: string;
 };
+
+export type StatType = {
+  name: string;
+  codeInsee: number;
+  year: number;
+  category: string;
+  value: number;
+};
