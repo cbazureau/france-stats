@@ -8,7 +8,8 @@
     "postinstall": "prisma generate",
     "lint": "next lint",
     "start": "next start",
-    "data": "npx tsx ./src/scripts/commune.ts"
+    "data:lyon.cities": "npx tsx ./src/scripts/lyon.cities.ts",
+    "data:lyon.districts": "npx tsx ./src/scripts/lyon.districts.ts"
   },
   "dependencies": {
     "@prisma/client": "^4.9.0",

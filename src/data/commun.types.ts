@@ -1,8 +1,8 @@
 export type CityType = {
   name: string;
-  inhabitant: string;
-  minHeight: number;
-  maxHeight: number;
+  inhabitant?: string;
+  minHeight?: number;
+  maxHeight?: number;
   area: number;
   codeInsee: number;
   zipCode: number;
