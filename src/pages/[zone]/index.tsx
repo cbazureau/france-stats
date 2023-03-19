@@ -1,4 +1,5 @@
 import { type NextPage } from "next";
+import { useState } from "react";
 import Head from "next/head";
 import Map from "~/components/MapSvg.lyon";
 import { ZONES } from "~/data/data.global";
@@ -21,9 +22,26 @@ type Props = {
   zone: string;
 };
 
+/**
+ * Zone
+ * @param zone
+ * @returns
+ */
 const Zone: NextPage<Props> = ({ zone }) => {
+  const [currentStat, setCurrentStat] = useState<string>("");
   const map = api.cities.getMap.useQuery({ zone });
+  const statData = currentStat
+    ? api.cities.getStatByName.useQuery({ zone, name: currentStat })?.data || []
+    : [];
   const zoneLabel = ZONES.find((z) => z.name === zone)?.label;
+  const stats = api.cities.getStats.useQuery({ zone });
+  const categories =
+    stats.data?.reduce<string[]>((acc, stat) => {
+      if (!acc.includes(stat.category)) {
+        acc.push(stat.category);
+      }
+      return acc;
+    }, []) || [];
 
   return (
     <>
@@ -38,6 +56,29 @@ const Zone: NextPage<Props> = ({ zone }) => {
             Statistiques{" "}
             <span className="text-[hsl(280,100%,70%)]">{zoneLabel}</span>
           </h1>
+          <select
+            className="rounded-md border border-white bg-transparent text-white"
+            onChange={(event) => {
+              setCurrentStat(event.target.value);
+            }}
+          >
+            <option key="empty" value="">
+              Sélectionner une statistique
+            </option>
+            {stats.data &&
+              categories.map((category) => (
+                <optgroup key={category} label={category}>
+                  {stats.data &&
+                    stats.data
+                      .filter((stat) => stat.category === category)
+                      .map((stat) => (
+                        <option key={stat.name} value={stat.name}>
+                          {stat.name}
+                        </option>
+                      ))}
+                </optgroup>
+              ))}
+          </select>
           {zone === "lyon" && (
             <Map
               cities={map.data ? map.data.cities : []}
