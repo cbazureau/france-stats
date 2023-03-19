@@ -1,5 +1,8 @@
 import { z } from "zod";
-import { CITIES as LYON_CITIES } from "../../../data/data.lyon";
+import {
+  CITIES as LYON_CITIES,
+  DISTRICTS as LYON_DISTRICTS,
+} from "../../../data/data.lyon";
 
 import { createTRPCRouter, publicProcedure } from "~/server/api/trpc";
 
@@ -17,7 +20,8 @@ export const citiesRouter = createTRPCRouter({
   getMap: publicProcedure
     .input(z.object({ zone: z.string() }))
     .query(({ input }) => {
-      if (input.zone === "lyon") return LYON_CITIES;
-      return [];
+      if (input.zone === "lyon")
+        return { cities: LYON_CITIES, districts: LYON_DISTRICTS };
+      return { cities: [], districts: [] };
     }),
 });

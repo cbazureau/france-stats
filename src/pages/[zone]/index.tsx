@@ -38,7 +38,12 @@ const Zone: NextPage<Props> = ({ zone }) => {
             Statistiques{" "}
             <span className="text-[hsl(280,100%,70%)]">{zoneLabel}</span>
           </h1>
-          {zone === "lyon" && <Map cities={map.data || []} />}
+          {zone === "lyon" && (
+            <Map
+              cities={map.data ? map.data.cities : []}
+              districts={map.data ? map.data.districts : []}
+            />
+          )}
         </div>
       </main>
     </>
