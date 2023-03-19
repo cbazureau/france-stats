@@ -12,7 +12,7 @@ datasource db {
 }
 
 model Commune {
-    codeInsee        String  @id @unique
+    codeInsee        Int     @id @unique
     zipCode          String
     wikipediaLink    String
     wikipediaPicture String
@@ -25,7 +25,7 @@ model Commune {
 }
 
 model Stats {
-    codeInsee String
+    codeInsee Int
     year      Int
     commune   Commune @relation(fields: [codeInsee], references: [codeInsee])
     name      String

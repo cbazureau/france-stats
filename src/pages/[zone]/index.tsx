@@ -30,9 +30,8 @@ type Props = {
 const Zone: NextPage<Props> = ({ zone }) => {
   const [currentStat, setCurrentStat] = useState<string>("");
   const map = api.cities.getMap.useQuery({ zone });
-  const statData = currentStat
-    ? api.cities.getStatByName.useQuery({ zone, name: currentStat })?.data || []
-    : [];
+  const statData =
+    api.cities.getStatByName.useQuery({ zone, name: currentStat })?.data || [];
   const zoneLabel = ZONES.find((z) => z.name === zone)?.label;
   const stats = api.cities.getStats.useQuery({ zone });
   const categories =
@@ -83,6 +82,7 @@ const Zone: NextPage<Props> = ({ zone }) => {
             <Map
               cities={map.data ? map.data.cities : []}
               districts={map.data ? map.data.districts : []}
+              stats={statData}
             />
           )}
         </div>

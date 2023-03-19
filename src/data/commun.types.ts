@@ -36,3 +36,9 @@ export type StatType = {
   canBeRelative?: boolean;
   value: number;
 };
+
+export type EnrichedStatType = StatType & {
+  population?: number;
+  relativeValue?: number;
+  gaussianValue?: number;
+};

@@ -6,6 +6,7 @@ import {
 import { STATS as LYON_STATS } from "../../../data/data.lyon.stats";
 
 import { createTRPCRouter, publicProcedure } from "~/server/api/trpc";
+import { getEnrichedStats } from "../utils";
 
 export const citiesRouter = createTRPCRouter({
   hello: publicProcedure
@@ -19,7 +20,7 @@ export const citiesRouter = createTRPCRouter({
     .input(z.object({ zone: z.string(), name: z.string() }))
     .query(({ input }) => {
       if (input.zone === "lyon")
-        return LYON_STATS.filter((stat) => stat.name === input.name);
+        return getEnrichedStats(LYON_STATS, input.name);
       return [];
     }),
   getStats: publicProcedure
