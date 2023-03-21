@@ -1,15 +1,26 @@
-import { type EnrichedStatType, type StatType } from "~/data/commun.types";
+import {
+  type EnrichedStatType,
+  type StatType,
+  type StatTypeType,
+} from "~/data/commun.types";
+
+const POPULATION_STAT_ID = 1;
+
 export const getEnrichedStats = (
   fullStats: StatType[],
-  stateName: string
+  statsType: StatTypeType[],
+  statId: number
 ): EnrichedStatType[] => {
+  const currentStat = statsType.find((s) => s.id === statId);
+  if (currentStat === undefined) return [];
   const enrichedStats: EnrichedStatType[] = fullStats
-    .filter((s) => s.name === stateName)
+    .filter((s) => s.statId === statId)
     .map((stat) => {
-      if (stat.canBeRelative) {
+      if (currentStat.canBeRelative) {
         const population =
           fullStats.find(
-            (s) => s.name === "population" && s.codeInsee === stat.codeInsee
+            (s) =>
+              s.statId === POPULATION_STAT_ID && s.codeInsee === stat.codeInsee
           )?.value || 0;
         return {
           ...stat,

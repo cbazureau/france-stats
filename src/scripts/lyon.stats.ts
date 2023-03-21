@@ -13,6 +13,88 @@ const lines = new nReadlines(
   )
 );
 
+export const RAW_STATS_TYPE = [
+  { id: 1, category: "general", name: "population", year: 2021 },
+  { id: 2, category: "general", name: "density", year: 2021 },
+  {
+    id: 3,
+    category: "crimes",
+    name: "autres-coups-et-blessures-volontaires",
+    year: 2021,
+    canBeRelative: true,
+  },
+  {
+    id: 4,
+    category: "crimes",
+    name: "cambriolages-de-logement",
+    year: 2021,
+    canBeRelative: true,
+  },
+  {
+    id: 5,
+    category: "crimes",
+    name: "coups-et-blessures-volontaires",
+    year: 2021,
+    canBeRelative: true,
+  },
+  {
+    id: 6,
+    category: "crimes",
+    name: "coups-et-blessures-volontaires-intrafamiliaux",
+    year: 2021,
+    canBeRelative: true,
+  },
+  {
+    id: 7,
+    category: "crimes",
+    name: "violences-sexuelles",
+    year: 2021,
+    canBeRelative: true,
+  },
+  {
+    id: 8,
+    category: "crimes",
+    name: "vols-avec-armes",
+    year: 2021,
+    canBeRelative: true,
+  },
+  {
+    id: 9,
+    category: "crimes",
+    name: "vols-d'accessoires-sur-véhicules",
+    year: 2021,
+    canBeRelative: true,
+  },
+  {
+    id: 10,
+    category: "crimes",
+    name: "vols-dans-les-véhicules",
+    year: 2021,
+    canBeRelative: true,
+  },
+  {
+    id: 11,
+    category: "crimes",
+    name: "vols-de-véhicules",
+    year: 2021,
+    canBeRelative: true,
+  },
+  {
+    id: 12,
+    category: "crimes",
+    name: "vols-sans-violence-contre-des-personnes",
+    year: 2021,
+    canBeRelative: true,
+  },
+  {
+    id: 13,
+    category: "crimes",
+    name: "vols-violents-sans-arme",
+    year: 2021,
+    canBeRelative: true,
+  },
+];
+
 const codeInsees = [
   ...LYON_CITIES.map((city) => city.codeInsee),
   ...LYON_DISTRICTS.map((district) => district.codeInsee),
@@ -33,49 +115,46 @@ while ((line = lines.next())) {
     const pop = tabs[9];
     if (
       pop &&
-      !entries.some(
-        (e) =>
-          e.codeInsee === codeInsee &&
-          e.year === 2021 &&
-          e.category === "general" &&
-          e.name === "Population"
-      )
+      !entries.some((e) => e.codeInsee === codeInsee && e.statId === 1)
     ) {
       // Add general.Population stats
       entries.push({
         codeInsee,
-        year: 2021,
-        name: "population",
-        category: "general",
+        statId: 1,
         value: parseInt(pop || "", 10),
       });
       const area = ALL_CITIES.find((c) => c.codeInsee === codeInsee)?.area;
       if (area)
         entries.push({
           codeInsee,
-          year: 2021,
-          name: "density",
-          category: "general",
+          statId: 2,
           value: Math.round((parseInt(pop || "", 10) / area) * 100) / 100,
         });
     }
     if (value !== "NA") {
+      const name = (tabs[2] || "").toLowerCase().replace(/ /g, "-");
+      const currentYear = 2000 + parseInt(year, 10);
+      const category = "crimes";
       // Add crimes.XXX stats
-      entries.push({
-        codeInsee,
-        year: 2000 + parseInt(year, 10),
-        name: (tabs[2] || "").toLowerCase().replace(/ /g, "-"),
-        category: "crimes",
-        canBeRelative: true,
-        value: parseInt(value || "", 10),
-      });
+      const statId = RAW_STATS_TYPE.find(
+        (s) =>
+          s.name === name && s.year === currentYear && s.category === category
+      )?.id;
+      if (statId)
+        entries.push({
+          codeInsee,
+          statId,
+          value: parseInt(value || "", 10),
+        });
     }
   }
 }
 
 fs.writeFileSync(
   path.resolve(process.cwd(), "./src/data/data.lyon.stats.ts"),
-  'import { type StatType } from "./commun.types"; export const STATS: StatType[] = ' +
+  'import { type StatType, StatTypeType } from "./commun.types"; export const STATS_TYPE:StatTypeType[] =' +
+    JSON.stringify(RAW_STATS_TYPE, null, 2) +
+    "; export const STATS: StatType[] = " +
     JSON.stringify(entries, null, 2) +
     ";"
 );

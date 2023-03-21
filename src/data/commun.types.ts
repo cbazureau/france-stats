@@ -29,15 +29,22 @@ export type ZoneType = {
 };
 
 export type StatType = {
-  name: string;
+  statId: number;
   codeInsee: number;
-  year: number;
-  category: string;
-  canBeRelative?: boolean;
   value: number;
 };
 
-export type EnrichedStatType = StatType & {
+export type StatTypeType = {
+  id: number;
+  name: string;
+  year: number;
+  category: string;
+  canBeRelative?: boolean;
+};
+
+export type EnrichedStatType = {
+  codeInsee: number;
+  value: number;
   population?: number;
   relativeValue?: number;
   gaussianValue?: number;

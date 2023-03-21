@@ -3,7 +3,10 @@ import {
   CITIES as LYON_CITIES,
   DISTRICTS as LYON_DISTRICTS,
 } from "../../../data/data.lyon";
-import { STATS as LYON_STATS } from "../../../data/data.lyon.stats";
+import {
+  STATS as LYON_STATS,
+  STATS_TYPE as LYON_STATS_TYPE,
+} from "../../../data/data.lyon.stats";
 
 import { createTRPCRouter, publicProcedure } from "~/server/api/trpc";
 import { getEnrichedStats } from "../utils";
@@ -16,34 +19,19 @@ export const citiesRouter = createTRPCRouter({
         greeting: `Hello ${input.text}`,
       };
     }),
-  getStatByName: publicProcedure
-    .input(z.object({ zone: z.string(), name: z.string() }))
+  getStatById: publicProcedure
+    .input(z.object({ zone: z.string(), id: z.number() }))
     .query(({ input }) => {
       if (input.zone === "lyon")
-        return getEnrichedStats(LYON_STATS, input.name);
+        return getEnrichedStats(LYON_STATS, LYON_STATS_TYPE, input.id);
       return [];
     }),
   getStats: publicProcedure
     .input(z.object({ zone: z.string() }))
     .query(({ input }) => {
-      if (input.zone === "lyon")
-        return LYON_STATS.reduce<{ category: string; name: string }[]>(
-          (acc, stat) => {
-            if (
-              acc.some(
-                (e) => e.category === stat.category && e.name === stat.name
-              )
-            )
-              return acc;
-            return [...acc, { category: stat.category, name: stat.name }];
-          },
-          []
-        );
+      if (input.zone === "lyon") return LYON_STATS_TYPE;
       return [];
     }),
-  // getCities: publicProcedure.query(({ ctx }) => {
-  //   return ctx.prisma.commune.findMany();
-  // }),
   getMap: publicProcedure
     .input(z.object({ zone: z.string() }))
     .query(({ input }) => {
