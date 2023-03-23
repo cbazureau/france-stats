@@ -45,8 +45,9 @@ const Path = ({ city, setHovered, stats, currentStat }: PathProps) => {
         fill: float2color({
           percentage: stats?.find((s) => s.codeInsee === codeInsee)
             ?.computedValue,
-          green: false,
+          green: currentStat?.type === "manual-scale",
           blue: false,
+          red: currentStat?.type === "auto-scale-population-relative",
           max: 200,
           min: 0,
         }),
