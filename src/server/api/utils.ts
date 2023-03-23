@@ -13,34 +13,33 @@ export const getEnrichedStats = (
 ): EnrichedStatType[] => {
   const currentStat = statsType.find((s) => s.id === statId);
   if (currentStat === undefined) return [];
-  const enrichedStats: EnrichedStatType[] = fullStats
+  const currentStats = fullStats.filter((s) => s.statId === statId);
+  const max = Math.max(...currentStats.map((s) => s.value));
+  const min = Math.min(
+    ...currentStats.filter((s) => s.value > 0).map((s) => s.value)
+  );
+  return fullStats
     .filter((s) => s.statId === statId)
-    .map((stat) => {
-      if (currentStat.canBeRelative) {
+    .map((stat: StatType): EnrichedStatType => {
+      const enrichedStat: EnrichedStatType = {
+        codeInsee: stat.codeInsee,
+        value: stat.value,
+        computedValue: stat.value,
+      };
+      if (currentStat.type === "auto-scale-population-relative") {
         const population =
           fullStats.find(
             (s) =>
               s.statId === POPULATION_STAT_ID && s.codeInsee === stat.codeInsee
           )?.value || 0;
-        return {
-          ...stat,
-          relativeValue: population ? stat.value / population : -1,
-        };
+        const relativeValue =
+          population && stat.value > 0 ? stat.value / population : undefined;
+        const computedValue = relativeValue
+          ? (relativeValue - min / population) / ((max - min) / population)
+          : undefined;
+
+        enrichedStat.computedValue = computedValue;
       }
-      return stat;
+      return enrichedStat;
     });
-  const max = Math.max(
-    ...enrichedStats
-      .filter((s) => s.relativeValue !== undefined && s.relativeValue !== -1)
-      .map((s) => s.relativeValue || 0)
-  );
-  const min = Math.min(
-    ...enrichedStats
-      .filter((s) => s.relativeValue !== undefined && s.relativeValue !== -1)
-      .map((s) => s.relativeValue || 0)
-  );
-  return enrichedStats.map((s) => ({
-    ...s,
-    gaussianValue: (s.relativeValue || 0 - min) / (max - min),
-  }));
 };

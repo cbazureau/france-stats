@@ -39,13 +39,13 @@ export type StatTypeType = {
   name: string;
   year: number;
   category: string;
-  canBeRelative?: boolean;
+  type: "manual-scale" | "auto-scale-population-relative";
+  scale?: number[];
 };
 
 export type EnrichedStatType = {
   codeInsee: number;
   value: number;
   population?: number;
-  relativeValue?: number;
-  gaussianValue?: number;
+  computedValue?: number;
 };

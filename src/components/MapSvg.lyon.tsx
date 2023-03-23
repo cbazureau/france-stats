@@ -1,23 +1,13 @@
 import { useState } from "react";
-import { type EnrichedStatType, type CityType } from "../data/commun.types";
+import {
+  type EnrichedStatType,
+  type CityType,
+  type StatTypeType,
+} from "../data/commun.types";
 
-type Props = {
-  cities: CityType[];
-  districts: CityType[];
-  stats: EnrichedStatType[];
-};
-
-const float2color = (percentage?: number): string => {
-  if (percentage === undefined || percentage === -1) {
-    return "transparent";
-  }
-  if (percentage === 0) {
-    return "transparent";
-  }
-  const color_part_dec = Math.round(255 * percentage);
-  const color_part_hex = Number(color_part_dec).toString(16);
-  return "#" + color_part_hex + color_part_hex + color_part_hex;
-};
+import Path from "./Path";
+import Label from "./Label";
+import Panel from "./Panel";
 
 const riverStyle = {
   fill: "none",
@@ -28,11 +18,26 @@ const riverStyle = {
   strokeOpacity: 1,
 };
 
-const Map = ({ cities, districts, stats }: Props) => {
+// Map
+
+type MapProps = {
+  cities: CityType[];
+  districts: CityType[];
+  stats: EnrichedStatType[];
+  currentStat?: StatTypeType;
+};
+
+const Map = ({ cities, districts, stats, currentStat }: MapProps) => {
   const [hovered, setHovered] = useState<number | null>(null);
   return (
     <>
-      <div className="text-white"></div>
+      {hovered && (
+        <Panel
+          city={[...cities, ...districts].find((c) => c.codeInsee === hovered)}
+          stats={stats}
+          currentStat={currentStat}
+        />
+      )}
       <div
         style={{
           width: "100%",
@@ -48,55 +53,26 @@ const Map = ({ cities, districts, stats }: Props) => {
         >
           <g className="city-paths" transform="translate(355,475)">
             <g transform="matrix(2,0,0,2,-618.74882,-51603.846)">
-              {cities.map((c) => {
-                const { codeInsee, svgPath } = c;
-                return (
-                  <path
-                    key={codeInsee}
-                    className="fill-indigo-50 stroke-indigo-600 stroke-1 opacity-80 hover:opacity-100"
-                    style={{
-                      fill: float2color(
-                        stats?.find((s) => s.codeInsee === codeInsee)
-                          ?.gaussianValue
-                      ),
-                    }}
-                    data-value={
-                      stats?.find((s) => s.codeInsee === codeInsee)
-                        ?.gaussianValue
-                    }
-                    d={svgPath.d}
-                    id={codeInsee.toString()}
-                    onMouseEnter={() => setHovered(codeInsee)}
-                    onMouseLeave={() => setHovered(null)}
-                    transform={svgPath.transform}
-                  />
-                );
-              })}
+              {cities.map((city) => (
+                <Path
+                  key={city.codeInsee}
+                  city={city}
+                  setHovered={setHovered}
+                  stats={stats}
+                  currentStat={currentStat}
+                />
+              ))}
             </g>
           </g>
           <g className="city-labels" transform="translate(-20,0)">
-            {cities.map((c) => {
-              const { codeInsee, svgLabel } = c;
-              return (
-                <text
-                  key={codeInsee}
-                  id={codeInsee.toString()}
-                  x={svgLabel.x}
-                  y={svgLabel.y}
-                  className={
-                    hovered === codeInsee
-                      ? "pointer-events-none fill-indigo-600 text-xs"
-                      : "pointer-events-none hidden fill-indigo-400 text-xs"
-                  }
-                >
-                  {svgLabel.titles.map((t, i) => (
-                    <tspan key={i} x={t.x} y={t.y}>
-                      {t.title}
-                    </tspan>
-                  ))}
-                </text>
-              );
-            })}
+            {cities.map((city) => (
+              <Label
+                key={city.codeInsee}
+                city={city}
+                hovered={hovered}
+                currentStat={currentStat}
+              />
+            ))}
           </g>
         </svg>
         <div
@@ -115,30 +91,15 @@ const Map = ({ cities, districts, stats }: Props) => {
             viewBox="0 0 310 350"
           >
             <g id="districts" transform="translate(-217.21023,-248.11122)">
-              {districts.map((c) => {
-                const { codeInsee, svgPath } = c;
-                return (
-                  <path
-                    key={codeInsee}
-                    className="fill-indigo-50 stroke-indigo-600 stroke-1 opacity-80 hover:opacity-100"
-                    style={{
-                      fill: float2color(
-                        stats?.find((s) => s.codeInsee === codeInsee)
-                          ?.gaussianValue
-                      ),
-                    }}
-                    data-value={
-                      stats?.find((s) => s.codeInsee === codeInsee)
-                        ?.gaussianValue
-                    }
-                    d={svgPath.d}
-                    id={codeInsee.toString()}
-                    onMouseEnter={() => setHovered(codeInsee)}
-                    onMouseLeave={() => setHovered(null)}
-                    transform={svgPath.transform}
-                  />
-                );
-              })}
+              {districts.map((city) => (
+                <Path
+                  key={city.codeInsee}
+                  city={city}
+                  setHovered={setHovered}
+                  stats={stats}
+                  currentStat={currentStat}
+                />
+              ))}
             </g>
             <g id="river" transform="translate(-217.21023,-248.11122)">
               <path
@@ -156,28 +117,14 @@ const Map = ({ cities, districts, stats }: Props) => {
               id="districts-labels"
               transform="translate(-217.21023,-248.11122)"
             >
-              {districts.map((c) => {
-                const { codeInsee, svgLabel } = c;
-                return (
-                  <text
-                    key={codeInsee}
-                    id={codeInsee.toString()}
-                    x={svgLabel.x}
-                    y={svgLabel.y}
-                    className={
-                      hovered === codeInsee
-                        ? "pointer-events-none fill-indigo-600 text-xs"
-                        : "pointer-events-none hidden fill-indigo-400 text-xs"
-                    }
-                  >
-                    {svgLabel.titles.map((t, i) => (
-                      <tspan key={i} x={t.x} y={t.y}>
-                        {t.title}
-                      </tspan>
-                    ))}
-                  </text>
-                );
-              })}
+              {districts.map((city) => (
+                <Label
+                  key={city.codeInsee}
+                  city={city}
+                  hovered={hovered}
+                  currentStat={currentStat}
+                />
+              ))}
             </g>
           </svg>
         </div>

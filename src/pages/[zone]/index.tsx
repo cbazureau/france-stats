@@ -84,6 +84,7 @@ const Zone: NextPage<Props> = ({ zone }) => {
               cities={map.data ? map.data.cities : []}
               districts={map.data ? map.data.districts : []}
               stats={statData}
+              currentStat={stats?.data?.find((s) => s.id === currentStat)}
             />
           )}
         </div>
