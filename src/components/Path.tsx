@@ -10,20 +10,19 @@ const float2color = ({
   green = true,
   blue = true,
   max = 255,
+  min = 0,
 }: {
   percentage?: number;
   red?: boolean;
   green?: boolean;
   blue?: boolean;
   max?: number;
+  min?: number;
 }): string => {
-  if (percentage === undefined || percentage === -1) {
+  if (percentage === undefined) {
     return "transparent";
   }
-  if (percentage === 0) {
-    return "transparent";
-  }
-  const color_part_dec = 255 - Math.round(max * percentage);
+  const color_part_dec = 255 - Math.round((max - min) * percentage + min);
   return `rgb(${red ? color_part_dec : "0"} ${green ? color_part_dec : "0"} ${
     blue ? color_part_dec : "0"
   })`;
@@ -49,6 +48,7 @@ const Path = ({ city, setHovered, stats, currentStat }: PathProps) => {
           green: false,
           blue: false,
           max: 200,
+          min: 0,
         }),
       }}
       data-value={stats?.find((s) => s.codeInsee === codeInsee)?.computedValue}

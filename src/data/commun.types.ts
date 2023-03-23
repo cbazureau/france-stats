@@ -41,6 +41,7 @@ export type StatTypeType = {
   category: string;
   type: "manual-scale" | "auto-scale-population-relative";
   scale?: number[];
+  unit: string;
 };
 
 export type EnrichedStatType = {

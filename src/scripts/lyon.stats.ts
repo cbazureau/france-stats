@@ -21,6 +21,7 @@ export const RAW_STATS_TYPE: StatTypeType[] = [
     year: 2021,
     type: "manual-scale",
     scale: [0, 2500, 5000, 7500, 10000, 20000, 30000, 50000],
+    unit: "habitants",
   },
   {
     id: 2,
@@ -29,6 +30,7 @@ export const RAW_STATS_TYPE: StatTypeType[] = [
     year: 2021,
     type: "manual-scale",
     scale: [0, 150, 250, 350, 500, 750, 1000, 1500],
+    unit: "habitants/km²",
   },
   {
     id: 3,
@@ -36,6 +38,7 @@ export const RAW_STATS_TYPE: StatTypeType[] = [
     name: "autres-coups-et-blessures-volontaires",
     year: 2021,
     type: "auto-scale-population-relative",
+    unit: " / 1000 habitants",
   },
   {
     id: 4,
@@ -43,6 +46,7 @@ export const RAW_STATS_TYPE: StatTypeType[] = [
     name: "cambriolages-de-logement",
     year: 2021,
     type: "auto-scale-population-relative",
+    unit: " / 1000 habitants",
   },
   {
     id: 5,
@@ -50,6 +54,7 @@ export const RAW_STATS_TYPE: StatTypeType[] = [
     name: "coups-et-blessures-volontaires",
     year: 2021,
     type: "auto-scale-population-relative",
+    unit: " / 1000 habitants",
   },
   {
     id: 6,
@@ -57,6 +62,7 @@ export const RAW_STATS_TYPE: StatTypeType[] = [
     name: "coups-et-blessures-volontaires-intrafamiliaux",
     year: 2021,
     type: "auto-scale-population-relative",
+    unit: " / 1000 habitants",
   },
   {
     id: 7,
@@ -64,6 +70,7 @@ export const RAW_STATS_TYPE: StatTypeType[] = [
     name: "violences-sexuelles",
     year: 2021,
     type: "auto-scale-population-relative",
+    unit: " / 1000 habitants",
   },
   {
     id: 8,
@@ -71,6 +78,7 @@ export const RAW_STATS_TYPE: StatTypeType[] = [
     name: "vols-avec-armes",
     year: 2021,
     type: "auto-scale-population-relative",
+    unit: " / 1000 habitants",
   },
   {
     id: 9,
@@ -78,6 +86,7 @@ export const RAW_STATS_TYPE: StatTypeType[] = [
     name: "vols-d'accessoires-sur-véhicules",
     year: 2021,
     type: "auto-scale-population-relative",
+    unit: " / 1000 habitants",
   },
   {
     id: 10,
@@ -85,6 +94,7 @@ export const RAW_STATS_TYPE: StatTypeType[] = [
     name: "vols-dans-les-véhicules",
     year: 2021,
     type: "auto-scale-population-relative",
+    unit: " / 1000 habitants",
   },
   {
     id: 11,
@@ -92,6 +102,7 @@ export const RAW_STATS_TYPE: StatTypeType[] = [
     name: "vols-de-véhicules",
     year: 2021,
     type: "auto-scale-population-relative",
+    unit: " / 1000 habitants",
   },
   {
     id: 12,
@@ -99,6 +110,7 @@ export const RAW_STATS_TYPE: StatTypeType[] = [
     name: "vols-sans-violence-contre-des-personnes",
     year: 2021,
     type: "auto-scale-population-relative",
+    unit: " / 1000 habitants",
   },
   {
     id: 13,
@@ -106,6 +118,7 @@ export const RAW_STATS_TYPE: StatTypeType[] = [
     name: "vols-violents-sans-arme",
     year: 2021,
     type: "auto-scale-population-relative",
+    unit: " / 1000 habitants",
   },
 ];
 
