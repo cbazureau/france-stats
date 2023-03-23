@@ -32,6 +32,7 @@ export type StatType = {
   statId: number;
   codeInsee: number;
   value: number;
+  details?: string[];
 };
 
 export type StatTypeType = {
@@ -49,4 +50,5 @@ export type EnrichedStatType = {
   value: number;
   population?: number;
   computedValue?: number;
+  details?: string[];
 };

@@ -24,7 +24,7 @@ export const STATS_TYPE: StatTypeType[] = [
     name: "autres-coups-et-blessures-volontaires",
     year: 2021,
     type: "auto-scale-population-relative",
-    unit: " / 1000 habitants",
+    unit: "/ 1000 habitants",
   },
   {
     id: 4,
@@ -32,7 +32,7 @@ export const STATS_TYPE: StatTypeType[] = [
     name: "cambriolages-de-logement",
     year: 2021,
     type: "auto-scale-population-relative",
-    unit: " / 1000 habitants",
+    unit: "/ 1000 habitants",
   },
   {
     id: 5,
@@ -40,7 +40,7 @@ export const STATS_TYPE: StatTypeType[] = [
     name: "coups-et-blessures-volontaires",
     year: 2021,
     type: "auto-scale-population-relative",
-    unit: " / 1000 habitants",
+    unit: "/ 1000 habitants",
   },
   {
     id: 6,
@@ -48,7 +48,7 @@ export const STATS_TYPE: StatTypeType[] = [
     name: "coups-et-blessures-volontaires-intrafamiliaux",
     year: 2021,
     type: "auto-scale-population-relative",
-    unit: " / 1000 habitants",
+    unit: "/ 1000 habitants",
   },
   {
     id: 7,
@@ -56,7 +56,7 @@ export const STATS_TYPE: StatTypeType[] = [
     name: "violences-sexuelles",
     year: 2021,
     type: "auto-scale-population-relative",
-    unit: " / 1000 habitants",
+    unit: "/ 1000 habitants",
   },
   {
     id: 8,
@@ -64,7 +64,7 @@ export const STATS_TYPE: StatTypeType[] = [
     name: "vols-avec-armes",
     year: 2021,
     type: "auto-scale-population-relative",
-    unit: " / 1000 habitants",
+    unit: "/ 1000 habitants",
   },
   {
     id: 9,
@@ -72,7 +72,7 @@ export const STATS_TYPE: StatTypeType[] = [
     name: "vols-d'accessoires-sur-véhicules",
     year: 2021,
     type: "auto-scale-population-relative",
-    unit: " / 1000 habitants",
+    unit: "/ 1000 habitants",
   },
   {
     id: 10,
@@ -80,7 +80,7 @@ export const STATS_TYPE: StatTypeType[] = [
     name: "vols-dans-les-véhicules",
     year: 2021,
     type: "auto-scale-population-relative",
-    unit: " / 1000 habitants",
+    unit: "/ 1000 habitants",
   },
   {
     id: 11,
@@ -88,7 +88,7 @@ export const STATS_TYPE: StatTypeType[] = [
     name: "vols-de-véhicules",
     year: 2021,
     type: "auto-scale-population-relative",
-    unit: " / 1000 habitants",
+    unit: "/ 1000 habitants",
   },
   {
     id: 12,
@@ -96,7 +96,7 @@ export const STATS_TYPE: StatTypeType[] = [
     name: "vols-sans-violence-contre-des-personnes",
     year: 2021,
     type: "auto-scale-population-relative",
-    unit: " / 1000 habitants",
+    unit: "/ 1000 habitants",
   },
   {
     id: 13,
@@ -104,10 +104,410 @@ export const STATS_TYPE: StatTypeType[] = [
     name: "vols-violents-sans-arme",
     year: 2021,
     type: "auto-scale-population-relative",
-    unit: " / 1000 habitants",
+    unit: "/ 1000 habitants",
+  },
+  {
+    id: 14,
+    category: "ecoles",
+    name: "colleges",
+    year: 2022,
+    type: "manual-scale",
+    unit: "IPS",
   },
 ];
 export const STATS: StatType[] = [
+  {
+    codeInsee: 69383,
+    statId: 14,
+    value: 109,
+    details: [
+      "Nom du collège : COLLEGE PROFESSEUR DARGENT - Catégorie : public - IPS : 109.6 - EcartType IPS : 40.9\r",
+      "Nom du collège : COLLEGE PRIVE PIERRE TERMIER SITE MONTCHAT - Catégorie : privé sous contrat - IPS : 114.6 - EcartType IPS : 39.2\r",
+      "Nom du collège : COLLEGE MOLIERE - Catégorie : public - IPS : 104.5 - EcartType IPS : 42.0\r",
+      "Nom du collège : COLLEGE RAOUL DUFY - Catégorie : public - IPS : 112.4 - EcartType IPS : 44.3\r",
+      "Nom du collège : COLLEGE PRIVE CHARLES DE FOUCAULD - Catégorie : privé sous contrat - IPS : 129.5 - EcartType IPS : 35.7\r",
+      "Nom du collège : COLLEGE GILBERT DRU - Catégorie : public - IPS : 98.6 - EcartType IPS : 39.0\r",
+      "Nom du collège : COLLEGE LACASSAGNE - Catégorie : public - IPS : 98.2 - EcartType IPS : 41.3\r",
+    ],
+  },
+  {
+    codeInsee: 69259,
+    statId: 14,
+    value: 75,
+    details: [
+      "Nom du collège : COLLEGE JULES MICHELET - Catégorie : public - IPS : 75.8 - EcartType IPS : 26.9\r",
+      "Nom du collège : COLLEGE LOUIS ARAGON - Catégorie : public - IPS : 73.3 - EcartType IPS : 19.9\r",
+      "Nom du collège : COLLEGE ELSA TRIOLET - Catégorie : public - IPS : 67.4 - EcartType IPS : 22.8\r",
+      "Nom du collège : COLLEGE PRIVE LA XAVIERE - Catégorie : privé sous contrat - IPS : 114.7 - EcartType IPS : 35.4\r",
+      "Nom du collège : COLLEGE PAUL ELUARD - Catégorie : public - IPS : 68.8 - EcartType IPS : 17.6\r",
+      "Nom du collège : COLLEGE HONORE DE BALZAC - Catégorie : public - IPS : 81.0 - EcartType IPS : 28.1\r",
+    ],
+  },
+  {
+    codeInsee: 69091,
+    statId: 14,
+    value: 102,
+    details: [
+      "Nom du collège : COLLEGE PRIVE NOTRE DAME - Catégorie : privé sous contrat - IPS : 102.1 - EcartType IPS : 34.1\r",
+      "Nom du collège : COLLEGE LUCIE AUBRAC - Catégorie : public - IPS : 74.6 - EcartType IPS : 27.6\r",
+      "Nom du collège : COLLEGE PAUL VALLON - Catégorie : public - IPS : 81.3 - EcartType IPS : 30.7\r",
+    ],
+  },
+  {
+    codeInsee: 69256,
+    statId: 14,
+    value: 77,
+    details: [
+      "Nom du collège : COLLEGE PIERRE VALDO - Catégorie : public - IPS : 77.4 - EcartType IPS : 28.2\r",
+      "Nom du collège : COLLEGE AIME CESAIRE - Catégorie : public - IPS : 77.4 - EcartType IPS : 25.3\r",
+      "Nom du collège : COLLEGE JACQUES DUCLOS - Catégorie : public - IPS : 77.1 - EcartType IPS : 25.7\r",
+      "Nom du collège : COLLEGE HENRI BARBUSSE - Catégorie : public - IPS : 79.5 - EcartType IPS : 26.5\r",
+    ],
+  },
+  {
+    codeInsee: 69266,
+    statId: 14,
+    value: 82,
+    details: [
+      "Nom du collège : COLLEGE LES IRIS - Catégorie : public - IPS : 82.9 - EcartType IPS : 31.5\r",
+      "Nom du collège : COLLEGE PRIVE MERE TERESA - Catégorie : privé sous contrat - IPS : 94.4 - EcartType IPS : 34.2\r",
+      "Nom du collège : COLLEGE LAMARTINE - Catégorie : public - IPS : 72.8 - EcartType IPS : 22.1\r",
+      "Nom du collège : COLLEGE PRIVE IMMACULEE CONCEPTION - Catégorie : privé sous contrat - IPS : 119.2 - EcartType IPS : 35.4\r",
+      "Nom du collège : COLLEGE DU TONKIN - Catégorie : public - IPS : 93.7 - EcartType IPS : 31.4\r",
+      "Nom du collège : COLLEGE JEAN MACE - Catégorie : public - IPS : 95.2 - EcartType IPS : 38.3\r",
+      "Nom du collège : COLLEGE PRIVE JUIF DE LYON - Catégorie : privé sous contrat - IPS : 109.7 - EcartType IPS : 33.8\r",
+      "Nom du collège : COLLEGE JEAN JAURES - Catégorie : public - IPS : 84.5 - EcartType IPS : 33.7\r",
+      "Nom du collège : COLLEGE LOUIS JOUVET - Catégorie : public - IPS : 95.3 - EcartType IPS : 41.2\r",
+      "Nom du collège : COLLEGE PRIVE BETH MENAHEM - Catégorie : privé sous contrat - IPS : 107.2 - EcartType IPS : 37.1\r",
+      "Nom du collège : COLLEGE DES GRATTE CIEL MORICE LEROUX - Catégorie : public - IPS : 94.5 - EcartType IPS : 39.0\r",
+      "Nom du collège : COLLEGE SIMONE LAGRANGE - Catégorie : public - IPS : 75.3 - EcartType IPS : 26.2\r",
+    ],
+  },
+  {
+    codeInsee: 69202,
+    statId: 14,
+    value: 100,
+    details: [
+      "Nom du collège : COLLEGE LE PLAN DU LOUP - Catégorie : public - IPS : 100.8 - EcartType IPS : 39.0\r",
+    ],
+  },
+  {
+    codeInsee: 69275,
+    statId: 14,
+    value: 99,
+    details: [
+      "Nom du collège : COLLEGE MARYSE BASTIE - Catégorie : public - IPS : 99.4 - EcartType IPS : 36.0\r",
+      "Nom du collège : COLLEGE GEORGES BRASSENS - Catégorie : public - IPS : 83.4 - EcartType IPS : 31.0\r",
+      "Nom du collège : COLLEGE PRIVE JEANNE D ARC - Catégorie : privé sous contrat - IPS : 108.5 - EcartType IPS : 34.7\r",
+      "Nom du collège : COLLEGE PRIVE AL KINDI - Catégorie : privé sous contrat - IPS : 69.1 - EcartType IPS : 9.5\r",
+    ],
+  },
+  {
+    codeInsee: 69286,
+    statId: 14,
+    value: 77,
+    details: [
+      "Nom du collège : COLLEGE MARIA CASARES - Catégorie : public - IPS : 77.6 - EcartType IPS : 28.2\r",
+      "Nom du collège : COLLEGE PRIVE SAINT CHARLES - Catégorie : privé sous contrat - IPS : 114.0 - EcartType IPS : 34.6\r",
+      "Nom du collège : COLLEGE PAUL EMILE VICTOR - Catégorie : public - IPS : 69.5 - EcartType IPS : 24.8\r",
+    ],
+  },
+  {
+    codeInsee: 69388,
+    statId: 14,
+    value: 88,
+    details: [
+      "Nom du collège : COLLEGE VICTOR GRIGNARD - Catégorie : public - IPS : 88.6 - EcartType IPS : 31.9\r",
+      "Nom du collège : COLLEGE PRIVE PIERRE TERMIER SITE MONPLAISIR - Catégorie : privé sous contrat - IPS : 122.5 - EcartType IPS : 32.3\r",
+      "Nom du collège : COLLEGE ALICE GUY - Catégorie : public - IPS : 83.5 - EcartType IPS : 28.4\r",
+      "Nom du collège : COLLEGE JEAN MERMOZ - Catégorie : public - IPS : 88.6 - EcartType IPS : 29.6\r",
+      "Nom du collège : COLLEGE HENRI LONGCHAMBON - Catégorie : public - IPS : 73.2 - EcartType IPS : 24.9\r",
+    ],
+  },
+  {
+    codeInsee: 69100,
+    statId: 14,
+    value: 101,
+    details: [
+      "Nom du collège : COLLEGE DAISY GEORGES MARTIN - Catégorie : public - IPS : 101.7 - EcartType IPS : 36.3\r",
+    ],
+  },
+  {
+    codeInsee: 69387,
+    statId: 14,
+    value: 83,
+    details: [
+      "Nom du collège : COLLEGE GABRIEL ROSSET - Catégorie : public - IPS : 83.9 - EcartType IPS : 31.4\r",
+      "Nom du collège : COLLEGE PRIVE CHEVREUL LESTONNAC - Catégorie : privé sous contrat - IPS : 127.0 - EcartType IPS : 34.2\r",
+      "Nom du collège : COLLEGE PRIVE SAINT LOUIS DE LA GUILLOTIERE - Catégorie : privé sous contrat - IPS : 121.9 - EcartType IPS : 36.6\r",
+      "Nom du collège : COLLEGE GEORGES CLEMENCEAU - Catégorie : public - IPS : 97.7 - EcartType IPS : 39.5\r",
+      "Nom du collège : COLLEGE CITE SCOLAIRE INTERNATIONALE - Catégorie : public - IPS : 146.6 - EcartType IPS : 27.6\r",
+      "Nom du collège : COLLEGE GISELE HALIMI - Catégorie : public - IPS : 100.1 - EcartType IPS : 36.3\r",
+    ],
+  },
+  {
+    codeInsee: 69382,
+    statId: 14,
+    value: 109,
+    details: [
+      "Nom du collège : COLLEGE AMPERE - Catégorie : public - IPS : 109.2 - EcartType IPS : 41.6\r",
+      "Nom du collège : COLLEGE PRIVE CHEVREUL - Catégorie : privé sous contrat - IPS : 130.9 - EcartType IPS : 35.6\r",
+      "Nom du collège : COLLEGE JEAN MONNET - Catégorie : public - IPS : 105.5 - EcartType IPS : 38.0\r",
+    ],
+  },
+  {
+    codeInsee: 69384,
+    statId: 14,
+    value: 113,
+    details: [
+      "Nom du collège : COLLEGE ANTOINE DE SAINT EXUPERY - Catégorie : public - IPS : 113.4 - EcartType IPS : 38.8\r",
+      "Nom du collège : COLLEGE PRIVE SAINT DENIS - Catégorie : privé sous contrat - IPS : 105.7 - EcartType IPS : 32.5\r",
+      "Nom du collège : COLLEGE PRIVE LES CHARTREUX ST CHARLES - Catégorie : privé sous contrat - IPS : 141.6 - EcartType IPS : 29.5\r",
+      "Nom du collège : COLLEGE CLEMENT MAROT - Catégorie : public - IPS : 127.3 - EcartType IPS : 38.3\r",
+      "Nom du collège : COLLEGE PRIVE LA SALLE LYON CROIX ROUSSE - Catégorie : privé sous contrat - IPS : 128.6 - EcartType IPS : 34.1\r",
+    ],
+  },
+  {
+    codeInsee: 69381,
+    statId: 14,
+    value: 147,
+    details: [
+      "Nom du collège : COLLEGE PRIVE INSTITUTION DES CHARTREUX - Catégorie : privé sous contrat - IPS : 147.6 - EcartType IPS : 26.1\r",
+      "Nom du collège : COLLEGE LA TOURETTE - Catégorie : public - IPS : 134.6 - EcartType IPS : 37.7\r",
+      "Nom du collège : COLLEGE PRIVE SAINT LOUIS SAINT BRUNO - Catégorie : privé sous contrat - IPS : 125.7 - EcartType IPS : 34.5\r",
+    ],
+  },
+  {
+    codeInsee: 69385,
+    statId: 14,
+    value: 135,
+    details: [
+      "Nom du collège : COLLEGE PRIVE LA FAVORITE SAINTE THERESE - Catégorie : privé sous contrat - IPS : 135.2 - EcartType IPS : 27.8\r",
+      "Nom du collège : COLLEGE PRIVE SAINTE MARIE - Catégorie : privé sous contrat - IPS : 132.1 - EcartType IPS : 34.4\r",
+      "Nom du collège : COLLEGE PRIVE SAINT MARC - Catégorie : privé sous contrat - IPS : 129.6 - EcartType IPS : 36.6\r",
+      "Nom du collège : COLLEGE LES BATTIERES - Catégorie : public - IPS : 94.0 - EcartType IPS : 35.4\r",
+      "Nom du collège : COLLEGE PRIVE NOTRE DAME DES MINIMES - Catégorie : privé sous contrat - IPS : 127.4 - EcartType IPS : 34.3\r",
+      "Nom du collège : COLLEGE JEAN CHARCOT - Catégorie : public - IPS : 89.2 - EcartType IPS : 36.4\r",
+      "Nom du collège : COLLEGE JEAN MOULIN - Catégorie : public - IPS : 123.8 - EcartType IPS : 40.1\r",
+      "Nom du collège : COLLEGE PRIVE AUX LAZARISTES - Catégorie : privé sous contrat - IPS : 146.3 - EcartType IPS : 28.5\r",
+    ],
+  },
+  {
+    codeInsee: 69204,
+    statId: 14,
+    value: 111,
+    details: [
+      "Nom du collège : COLLEGE PAUL D AUBAREDE - Catégorie : public - IPS : 111.3 - EcartType IPS : 38.1\r",
+      "Nom du collège : COLLEGE JEAN GIONO - Catégorie : public - IPS : 105.3 - EcartType IPS : 42.1\r",
+    ],
+  },
+  {
+    codeInsee: 69029,
+    statId: 14,
+    value: 86,
+    details: [
+      "Nom du collège : COLLEGE THEODORE MONOD - Catégorie : public - IPS : 86.5 - EcartType IPS : 35.0\r",
+      "Nom du collège : COLLEGE JOLIOT CURIE - Catégorie : public - IPS : 87.8 - EcartType IPS : 34.0\r",
+      "Nom du collège : COLLEGE PABLO PICASSO - Catégorie : public - IPS : 111.8 - EcartType IPS : 38.4\r",
+    ],
+  },
+  {
+    codeInsee: 69152,
+    statId: 14,
+    value: 78,
+    details: [
+      "Nom du collège : COLLEGE MARCEL PAGNOL - Catégorie : public - IPS : 78.0 - EcartType IPS : 32.0\r",
+    ],
+  },
+  {
+    codeInsee: 69282,
+    statId: 14,
+    value: 100,
+    details: [
+      "Nom du collège : COLLEGE LES SERVIZIERES - Catégorie : public - IPS : 100.1 - EcartType IPS : 36.6\r",
+      "Nom du collège : COLLEGE EVARISTE GALOIS - Catégorie : public - IPS : 102.7 - EcartType IPS : 37.2\r",
+      "Nom du collège : COLLEGE OLIVIER DE SERRES - Catégorie : public - IPS : 108.0 - EcartType IPS : 37.4\r",
+    ],
+  },
+  {
+    codeInsee: 69290,
+    statId: 14,
+    value: 96,
+    details: [
+      "Nom du collège : COLLEGE GERARD PHILIPE - Catégorie : public - IPS : 96.4 - EcartType IPS : 32.6\r",
+      "Nom du collège : COLLEGE BORIS VIAN - Catégorie : public - IPS : 90.5 - EcartType IPS : 33.2\r",
+      "Nom du collège : COLLEGE COLETTE - Catégorie : public - IPS : 87.5 - EcartType IPS : 26.3\r",
+      "Nom du collège : COLLEGE SIMONE VEIL - Catégorie : public - IPS : 94.1 - EcartType IPS : 30.9\r",
+      "Nom du collège : COLLEGE PRIVE LA XAVIERE - Catégorie : privé sous contrat - IPS : 125.6 - EcartType IPS : 32.6\r",
+    ],
+  },
+  {
+    codeInsee: 69034,
+    statId: 14,
+    value: 105,
+    details: [
+      "Nom du collège : COLLEGE CHARLES SENARD - Catégorie : public - IPS : 105.9 - EcartType IPS : 41.4\r",
+      "Nom du collège : CITE SCOLAIRE ELIE VIGNAL - Catégorie : public - IPS : 114.0 - EcartType IPS : 38.7\r",
+      "Nom du collège : COLLEGE ANDRE LASSAGNE - Catégorie : public - IPS : 105.0 - EcartType IPS : 39.1\r",
+    ],
+  },
+  {
+    codeInsee: 69389,
+    statId: 14,
+    value: 80,
+    details: [
+      "Nom du collège : COLLEGE JEAN DE VERRAZANE - Catégorie : public - IPS : 80.4 - EcartType IPS : 30.1\r",
+      "Nom du collège : COLLEGE VICTOR SCHOELCHER - Catégorie : public - IPS : 75.1 - EcartType IPS : 24.1\r",
+      "Nom du collège : COLLEGE JEAN PERRIN - Catégorie : public - IPS : 109.0 - EcartType IPS : 40.4\r",
+    ],
+  },
+  {
+    codeInsee: 69386,
+    statId: 14,
+    value: 123,
+    details: [
+      "Nom du collège : COLLEGE PRIVE DEBORDE - Catégorie : privé sous contrat - IPS : 123.8 - EcartType IPS : 34.5\r",
+      "Nom du collège : COLLEGE PRIVE FENELON - Catégorie : privé sous contrat - IPS : 135.7 - EcartType IPS : 32.5\r",
+      "Nom du collège : COLLEGE PRIVE NOTRE DAME DE BELLECOMBE - Catégorie : privé sous contrat - IPS : 132.9 - EcartType IPS : 34.9\r",
+      "Nom du collège : COLLEGE VENDOME - Catégorie : public - IPS : 138.0 - EcartType IPS : 33.2\r",
+      "Nom du collège : COLLEGE BELLECOMBE - Catégorie : public - IPS : 119.5 - EcartType IPS : 40.2\r",
+    ],
+  },
+  {
+    codeInsee: 69089,
+    statId: 14,
+    value: 124,
+    details: [
+      "Nom du collège : COLLEGE CHRISTIANE BERNARDIN - Catégorie : public - IPS : 124.3 - EcartType IPS : 37.6\r",
+    ],
+  },
+  {
+    codeInsee: 69088,
+    statId: 14,
+    value: 111,
+    details: [
+      "Nom du collège : COLLEGE JEAN DE TOURNES - Catégorie : public - IPS : 111.0 - EcartType IPS : 39.7\r",
+    ],
+  },
+  {
+    codeInsee: 69096,
+    statId: 14,
+    value: 97,
+    details: [
+      "Nom du collège : COLLEGE EMILE MALFROY - Catégorie : public - IPS : 97.2 - EcartType IPS : 36.8\r",
+    ],
+  },
+  {
+    codeInsee: 69069,
+    statId: 14,
+    value: 118,
+    details: [
+      "Nom du collège : COLLEGE JEAN ROSTAND - Catégorie : public - IPS : 118.3 - EcartType IPS : 39.0\r",
+    ],
+  },
+  {
+    codeInsee: 69273,
+    statId: 14,
+    value: 109,
+    details: [
+      "Nom du collège : COLLEGE RENE CASSIN - Catégorie : public - IPS : 109.0 - EcartType IPS : 35.3\r",
+    ],
+  },
+  {
+    codeInsee: 69244,
+    statId: 14,
+    value: 147,
+    details: [
+      "Nom du collège : COLLEGE PRIVE SAINT JOSEPH - Catégorie : privé sous contrat - IPS : 147.1 - EcartType IPS : 24.8\r",
+      "Nom du collège : COLLEGE JEAN JACQUES ROUSSEAU - Catégorie : public - IPS : 119.4 - EcartType IPS : 40.0\r",
+    ],
+  },
+  {
+    codeInsee: 69149,
+    statId: 14,
+    value: 115,
+    details: [
+      "Nom du collège : COLLEGE PRIVE NOTRE DAME DU BON CONSEIL - Catégorie : privé sous contrat - IPS : 115.7 - EcartType IPS : 36.1\r",
+      "Nom du collège : COLLEGE LA CLAVELIERE - Catégorie : public - IPS : 90.2 - EcartType IPS : 39.1\r",
+      "Nom du collège : COLLEGE PRIVE SAINT THOMAS D AQUIN VERITAS - Catégorie : privé sous contrat - IPS : 132.3 - EcartType IPS : 32.7\r",
+      "Nom du collège : COLLEGE PRIVE DES CHASSAGNES - Catégorie : privé sous contrat - IPS : 107.9 - EcartType IPS : 34.1\r",
+      "Nom du collège : COLLEGE PIERRE BROSSOLETTE - Catégorie : public - IPS : 92.1 - EcartType IPS : 37.2\r",
+    ],
+  },
+  {
+    codeInsee: 69194,
+    statId: 14,
+    value: 143,
+    details: [
+      "Nom du collège : COLLEGE PRIVE FROMENTE - Catégorie : privé sous contrat - IPS : 143.0 - EcartType IPS : 26.2\r",
+    ],
+  },
+  {
+    codeInsee: 69271,
+    statId: 14,
+    value: 126,
+    details: [
+      "Nom du collège : COLLEGE LEONARD DE VINCI - Catégorie : public - IPS : 126.0 - EcartType IPS : 35.9\r",
+    ],
+  },
+  {
+    codeInsee: 69199,
+    statId: 14,
+    value: 66,
+    details: [
+      "Nom du collège : COLLEGE ALAIN - Catégorie : public - IPS : 66.6 - EcartType IPS : 19.1\r",
+    ],
+  },
+  {
+    codeInsee: 69143,
+    statId: 14,
+    value: 107,
+    details: [
+      "Nom du collège : COLLEGE JEAN RENOIR - Catégorie : public - IPS : 107.0 - EcartType IPS : 40.6\r",
+      "Nom du collège : COLLEGE PRIVE NOTRE DAME DE BELLEGARDE - Catégorie : privé sous contrat - IPS : 144.8 - EcartType IPS : 26.6\r",
+    ],
+  },
+  {
+    codeInsee: 69276,
+    statId: 14,
+    value: 93,
+    details: [
+      "Nom du collège : COLLEGE FREDERIC MISTRAL - Catégorie : public - IPS : 93.7 - EcartType IPS : 32.4\r",
+    ],
+  },
+  {
+    codeInsee: 69283,
+    statId: 14,
+    value: 105,
+    details: [
+      "Nom du collège : COLLEGE MARTIN LUTHER KING - Catégorie : public - IPS : 105.8 - EcartType IPS : 36.5\r",
+    ],
+  },
+  {
+    codeInsee: 69142,
+    statId: 14,
+    value: 127,
+    details: [
+      "Nom du collège : COLLEGE PRIVE ASSOMPTION BELLEVUE - Catégorie : privé sous contrat - IPS : 127.1 - EcartType IPS : 33.7\r",
+    ],
+  },
+  {
+    codeInsee: 69081,
+    statId: 14,
+    value: 134,
+    details: [
+      "Nom du collège : COLLEGE PRIVE DU SACRE COEUR - Catégorie : privé sous contrat - IPS : 134.4 - EcartType IPS : 33.9\r",
+      "Nom du collège : COLLEGE LAURENT MOURGUET - Catégorie : public - IPS : 97.4 - EcartType IPS : 38.8\r",
+    ],
+  },
+  {
+    codeInsee: 69040,
+    statId: 14,
+    value: 106,
+    details: [
+      "Nom du collège : COLLEGE JEAN PHILIPPE RAMEAU - Catégorie : public - IPS : 106.4 - EcartType IPS : 40.7\r",
+    ],
+  },
   {
     codeInsee: 69003,
     statId: 1,

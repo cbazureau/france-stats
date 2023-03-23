@@ -6,6 +6,13 @@ import {
   DISTRICTS as LYON_DISTRICTS,
 } from "~/data/data.lyon";
 import { type StatType, type StatTypeType } from "~/data/commun.types";
+
+// https://www.data.gouv.fr/fr/datasets/indices-de-position-sociale-dans-les-colleges-de-france-metropolitaine-et-drom/
+const schoolLines = new nReadlines(
+  path.resolve(process.cwd(), "./prisma/rawdata/fr-en-ips_colleges.csv")
+);
+
+// https://www.data.gouv.fr/fr/datasets/bases-statistiques-communale-et-departementale-de-la-delinquance-enregistree-par-la-police-et-la-gendarmerie-nationales/
 const lines = new nReadlines(
   path.resolve(
     process.cwd(),
@@ -38,7 +45,7 @@ export const RAW_STATS_TYPE: StatTypeType[] = [
     name: "autres-coups-et-blessures-volontaires",
     year: 2021,
     type: "auto-scale-population-relative",
-    unit: " / 1000 habitants",
+    unit: "/ 1000 habitants",
   },
   {
     id: 4,
@@ -46,7 +53,7 @@ export const RAW_STATS_TYPE: StatTypeType[] = [
     name: "cambriolages-de-logement",
     year: 2021,
     type: "auto-scale-population-relative",
-    unit: " / 1000 habitants",
+    unit: "/ 1000 habitants",
   },
   {
     id: 5,
@@ -54,7 +61,7 @@ export const RAW_STATS_TYPE: StatTypeType[] = [
     name: "coups-et-blessures-volontaires",
     year: 2021,
     type: "auto-scale-population-relative",
-    unit: " / 1000 habitants",
+    unit: "/ 1000 habitants",
   },
   {
     id: 6,
@@ -62,7 +69,7 @@ export const RAW_STATS_TYPE: StatTypeType[] = [
     name: "coups-et-blessures-volontaires-intrafamiliaux",
     year: 2021,
     type: "auto-scale-population-relative",
-    unit: " / 1000 habitants",
+    unit: "/ 1000 habitants",
   },
   {
     id: 7,
@@ -70,7 +77,7 @@ export const RAW_STATS_TYPE: StatTypeType[] = [
     name: "violences-sexuelles",
     year: 2021,
     type: "auto-scale-population-relative",
-    unit: " / 1000 habitants",
+    unit: "/ 1000 habitants",
   },
   {
     id: 8,
@@ -78,7 +85,7 @@ export const RAW_STATS_TYPE: StatTypeType[] = [
     name: "vols-avec-armes",
     year: 2021,
     type: "auto-scale-population-relative",
-    unit: " / 1000 habitants",
+    unit: "/ 1000 habitants",
   },
   {
     id: 9,
@@ -86,7 +93,7 @@ export const RAW_STATS_TYPE: StatTypeType[] = [
     name: "vols-d'accessoires-sur-véhicules",
     year: 2021,
     type: "auto-scale-population-relative",
-    unit: " / 1000 habitants",
+    unit: "/ 1000 habitants",
   },
   {
     id: 10,
@@ -94,7 +101,7 @@ export const RAW_STATS_TYPE: StatTypeType[] = [
     name: "vols-dans-les-véhicules",
     year: 2021,
     type: "auto-scale-population-relative",
-    unit: " / 1000 habitants",
+    unit: "/ 1000 habitants",
   },
   {
     id: 11,
@@ -102,7 +109,7 @@ export const RAW_STATS_TYPE: StatTypeType[] = [
     name: "vols-de-véhicules",
     year: 2021,
     type: "auto-scale-population-relative",
-    unit: " / 1000 habitants",
+    unit: "/ 1000 habitants",
   },
   {
     id: 12,
@@ -110,7 +117,7 @@ export const RAW_STATS_TYPE: StatTypeType[] = [
     name: "vols-sans-violence-contre-des-personnes",
     year: 2021,
     type: "auto-scale-population-relative",
-    unit: " / 1000 habitants",
+    unit: "/ 1000 habitants",
   },
   {
     id: 13,
@@ -118,7 +125,15 @@ export const RAW_STATS_TYPE: StatTypeType[] = [
     name: "vols-violents-sans-arme",
     year: 2021,
     type: "auto-scale-population-relative",
-    unit: " / 1000 habitants",
+    unit: "/ 1000 habitants",
+  },
+  {
+    id: 14,
+    category: "ecoles",
+    name: "colleges",
+    year: 2022,
+    type: "manual-scale",
+    unit: "IPS",
   },
 ];
 
@@ -128,10 +143,42 @@ const codeInsees = [
 ];
 
 const ALL_CITIES = [...LYON_CITIES, ...LYON_DISTRICTS];
-
-let line;
 const entries: StatType[] = [];
 
+// Schools
+let schoolLine;
+while ((schoolLine = schoolLines.next())) {
+  const currentLine = schoolLine.toString("utf8") || "";
+  if (currentLine.startsWith("2021-2022;LYON;069;RHONE")) {
+    const tabs = currentLine.toString().split(";");
+    const codeInsee = parseInt(tabs[6] || "", 10);
+    if (codeInsees.includes(codeInsee)) {
+      const value = parseInt(tabs[9] || "", 10);
+      const currentSchoolEntry = entries.find(
+        (e) => e.codeInsee === codeInsee && e.statId === 14
+      );
+      const detail = [
+        `Nom du collège : ${tabs[5] || ""}`,
+        `Catégorie : ${tabs[8] || ""}`,
+        `IPS : ${tabs[9] || ""}`,
+        `EcartType IPS : ${tabs[10] || ""}`,
+      ]
+        .filter(Boolean)
+        .join(" - ");
+      if (!currentSchoolEntry) {
+        entries.push({
+          codeInsee,
+          statId: 14,
+          value,
+          details: [detail],
+        });
+      } else currentSchoolEntry.details?.push(detail);
+    }
+  }
+}
+
+// Crimes and population
+let line;
 while ((line = lines.next())) {
   const currentLine = line.toString("utf8") || "";
   const codeInsee = parseInt(currentLine.slice(0, 5), 10);

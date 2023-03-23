@@ -50,6 +50,7 @@ export const getEnrichedStats = (
         value: stat.value,
         computedValue: stat.value,
         population: stat.population,
+        details: stat.details,
       };
       if (currentStat.type === "auto-scale-population-relative") {
         const relativeValue =
