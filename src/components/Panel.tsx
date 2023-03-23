@@ -23,9 +23,14 @@ const Panel = ({ city, stats, currentStat }: PanelProps) => {
     value !== undefined &&
     currentStat?.type === "auto-scale-population-relative"
   ) {
-    value = stats?.find((s) => s.codeInsee === codeInsee)?.computedValue;
-    if (value !== undefined) {
-      value = `${Math.round(value * 100000) / 100} pour milles habitants`;
+    value = stats?.find((s) => s.codeInsee === codeInsee)?.value;
+    const population = stats?.find(
+      (s) => s.codeInsee === codeInsee
+    )?.population;
+    if (value !== undefined && population !== undefined) {
+      value = `${
+        Math.round((value / population) * 100000) / 100
+      } pour milles habitants`;
     }
   }
   if (currentStat && value === undefined) {

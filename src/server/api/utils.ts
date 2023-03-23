@@ -13,33 +13,60 @@ export const getEnrichedStats = (
 ): EnrichedStatType[] => {
   const currentStat = statsType.find((s) => s.id === statId);
   if (currentStat === undefined) return [];
-  const currentStats = fullStats.filter((s) => s.statId === statId);
-  const max = Math.max(...currentStats.map((s) => s.value));
-  const min = Math.min(
-    ...currentStats.filter((s) => s.value > 0).map((s) => s.value)
-  );
-  return fullStats
-    .filter((s) => s.statId === statId)
-    .map((stat: StatType): EnrichedStatType => {
+  const currentStats: Array<EnrichedStatType & { population?: number }> =
+    fullStats
+      .filter((s) => s.statId === statId)
+      .map((stat) => {
+        if (currentStat.type === "auto-scale-population-relative") {
+          const population = fullStats.find(
+            (s) =>
+              s.statId === POPULATION_STAT_ID && s.codeInsee === stat.codeInsee
+          )?.value;
+          return {
+            ...stat,
+            population,
+          };
+        }
+        return stat;
+      });
+  let min: number;
+  let max: number;
+  if (currentStat.type === "auto-scale-population-relative") {
+    max = Math.max(...currentStats.map((s) => s.value / (s.population || 1)));
+    min = Math.min(
+      ...currentStats
+        .filter((s) => s.value > 0)
+        .map((s) => s.value / (s.population || 1))
+    );
+  } else {
+    max = Math.max(...currentStats.map((s) => s.value));
+    min = Math.min(...currentStats.map((s) => s.value));
+  }
+
+  return currentStats.map(
+    (stat: EnrichedStatType & { population?: number }): EnrichedStatType => {
       const enrichedStat: EnrichedStatType = {
         codeInsee: stat.codeInsee,
         value: stat.value,
         computedValue: stat.value,
+        population: stat.population,
       };
       if (currentStat.type === "auto-scale-population-relative") {
-        const population =
-          fullStats.find(
-            (s) =>
-              s.statId === POPULATION_STAT_ID && s.codeInsee === stat.codeInsee
-          )?.value || 0;
         const relativeValue =
-          population && stat.value > 0 ? stat.value / population : undefined;
+          stat.population && stat.value > 0
+            ? stat.value / stat.population
+            : undefined;
         const computedValue = relativeValue
-          ? (relativeValue - min / population) / ((max - min) / population)
+          ? (relativeValue - min) / (max - min)
           : undefined;
 
         enrichedStat.computedValue = computedValue;
       }
+      if (currentStat.type === "manual-scale") {
+        const relativeValue = stat.value > 0 ? stat.value / max : undefined;
+        enrichedStat.computedValue = relativeValue;
+      }
       return enrichedStat;
-    });
+    }
+  );
 };

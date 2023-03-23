@@ -4,16 +4,29 @@ import {
   type StatTypeType,
 } from "../data/commun.types";
 
-const float2color = (percentage?: number): string => {
+const float2color = ({
+  percentage,
+  red = true,
+  green = true,
+  blue = true,
+  max = 255,
+}: {
+  percentage?: number;
+  red?: boolean;
+  green?: boolean;
+  blue?: boolean;
+  max?: number;
+}): string => {
   if (percentage === undefined || percentage === -1) {
     return "transparent";
   }
   if (percentage === 0) {
     return "transparent";
   }
-  const color_part_dec = Math.round(255 * percentage);
-  const color_part_hex = Number(color_part_dec).toString(16);
-  return "#" + color_part_hex + color_part_hex + color_part_hex;
+  const color_part_dec = 255 - Math.round(max * percentage);
+  return `rgb(${red ? color_part_dec : "0"} ${green ? color_part_dec : "0"} ${
+    blue ? color_part_dec : "0"
+  })`;
 };
 
 type PathProps = {
@@ -30,15 +43,19 @@ const Path = ({ city, setHovered, stats, currentStat }: PathProps) => {
       key={codeInsee}
       className="fill-indigo-50 stroke-indigo-600 stroke-1 opacity-80 hover:opacity-100"
       style={{
-        fill: float2color(
-          stats?.find((s) => s.codeInsee === codeInsee)?.computedValue
-        ),
+        fill: float2color({
+          percentage: stats?.find((s) => s.codeInsee === codeInsee)
+            ?.computedValue,
+          green: false,
+          blue: false,
+          max: 200,
+        }),
       }}
       data-value={stats?.find((s) => s.codeInsee === codeInsee)?.computedValue}
       d={svgPath.d}
       id={codeInsee.toString()}
       onMouseEnter={() => setHovered(codeInsee)}
-      //onMouseLeave={() => setHovered(null)}
+      onMouseLeave={() => setHovered(null)}
       transform={svgPath.transform}
     />
   );
